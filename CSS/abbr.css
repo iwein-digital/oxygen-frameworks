@@ -1,0 +1,9 @@
+﻿am {
+	-oxy-display-tags: none;
+	-oxy-prepend-content: "";
+}
+ex {
+	visibility:-oxy-collapse-text;
+	-oxy-display-tags: none;
+	-oxy-prepend-content: "";
+}
