@@ -26,6 +26,17 @@
 								<cssFile-array>
 									<cssFile>
 										<field name="href">
+											<String>${framework}/CSS/basic.css</String>
+										</field>
+										<field name="title">
+											<String>basic</String>
+										</field>
+										<field name="alternate">
+											<Boolean>false</Boolean>
+										</field>
+									</cssFile>
+									<cssFile>
+										<field name="href">
 											<String>${framework}/CSS/abbr.css</String>
 										</field>
 										<field name="title">
@@ -44,17 +55,6 @@
 										</field>
 										<field name="alternate">
 											<Boolean>true</Boolean>
-										</field>
-									</cssFile>
-									<cssFile>
-										<field name="href">
-											<String>${framework}/CSS/basic.css</String>
-										</field>
-										<field name="title">
-											<String>basic</String>
-										</field>
-										<field name="alternate">
-											<Boolean>false</Boolean>
 										</field>
 									</cssFile>
 								</cssFile-array>
@@ -169,16 +169,16 @@
 									</action>
 									<action>
 										<field name="id">
-											<String>n-d</String>
+											<String>abbr</String>
 										</field>
 										<field name="name">
-											<String>n-d</String>
+											<String>abbr</String>
 										</field>
 										<field name="description">
-											<String>N+D: Inserts an n with a macron and a 'd' as expansion (especially for "und")</String>
+											<String>Inserts a custom abbreviation</String>
 										</field>
 										<field name="largeIconPath">
-											<String>file:/Users/gusriva/Desktop/macron.png</String>
+											<String></String>
 										</field>
 										<field name="smallIconPath">
 											<String></String>
@@ -199,7 +199,7 @@
 														<serializableOrderedMap>
 															<entry>
 																<String>fragment</String>
-																<String>&lt;am xmlns="http://www.tei-c.org/ns/1.0">n̄&lt;/am>&lt;ex xmlns="http://www.tei-c.org/ns/1.0">nd&lt;/ex></String>
+																<String>&lt;am xmlns="http://www.tei-c.org/ns/1.0">${ask('abbreviation:')}&lt;/am>&lt;ex xmlns="http://www.tei-c.org/ns/1.0">${ask('expansion:')}&lt;/ex></String>
 															</entry>
 														</serializableOrderedMap>
 													</field>
@@ -655,6 +655,244 @@
 											<Boolean>false</Boolean>
 										</field>
 									</action>
+									<action>
+										<field name="id">
+											<String>pb</String>
+										</field>
+										<field name="name">
+											<String>pb</String>
+										</field>
+										<field name="description">
+											<String>Creates a pb</String>
+										</field>
+										<field name="largeIconPath">
+											<String></String>
+										</field>
+										<field name="smallIconPath">
+											<String></String>
+										</field>
+										<field name="accessKey">
+											<String></String>
+										</field>
+										<field name="accelerator">
+											<null/>
+										</field>
+										<field name="actionModes">
+											<actionMode-array>
+												<actionMode>
+													<field name="xpathCondition">
+														<String></String>
+													</field>
+													<field name="argValues">
+														<serializableOrderedMap>
+															<entry>
+																<String>fragment</String>
+																<String>&lt;pb xmlns="http://www.tei-c.org/ns/1.0" facs="${ask('folio:')}">&lt;/pb></String>
+															</entry>
+															<entry>
+																<String>insertLocation</String>
+																<String></String>
+															</entry>
+															<entry>
+																<String>insertPosition</String>
+																<String>Before</String>
+															</entry>
+														</serializableOrderedMap>
+													</field>
+													<field name="operationID">
+														<String>ro.sync.ecss.extensions.commons.operations.InsertOrReplaceFragmentOperation</String>
+													</field>
+												</actionMode>
+											</actionMode-array>
+										</field>
+										<field name="enabledInReadOnlyContext">
+											<Boolean>false</Boolean>
+										</field>
+									</action>
+									<action>
+										<field name="id">
+											<String>n-d</String>
+										</field>
+										<field name="name">
+											<String>n-d</String>
+										</field>
+										<field name="description">
+											<String>Inserts a n+d abbreviation</String>
+										</field>
+										<field name="largeIconPath">
+											<String>file:/Users/gusriva/Desktop/macron.png</String>
+										</field>
+										<field name="smallIconPath">
+											<String></String>
+										</field>
+										<field name="accessKey">
+											<String></String>
+										</field>
+										<field name="accelerator">
+											<null/>
+										</field>
+										<field name="actionModes">
+											<actionMode-array>
+												<actionMode>
+													<field name="xpathCondition">
+														<String></String>
+													</field>
+													<field name="argValues">
+														<serializableOrderedMap>
+															<entry>
+																<String>fragment</String>
+																<String>&lt;am xmlns="http://www.tei-c.org/ns/1.0">n̄&lt;/am>&lt;ex xmlns="http://www.tei-c.org/ns/1.0">nd&lt;/ex></String>
+															</entry>
+														</serializableOrderedMap>
+													</field>
+													<field name="operationID">
+														<String>ro.sync.ecss.extensions.commons.operations.InsertOrReplaceFragmentOperation</String>
+													</field>
+												</actionMode>
+											</actionMode-array>
+										</field>
+										<field name="enabledInReadOnlyContext">
+											<Boolean>false</Boolean>
+										</field>
+									</action>
+									<action>
+										<field name="id">
+											<String>e-n</String>
+										</field>
+										<field name="name">
+											<String>e-n</String>
+										</field>
+										<field name="description">
+											<String>Inserts a en abbreviation</String>
+										</field>
+										<field name="largeIconPath">
+											<String>file:/Users/gusriva/Desktop/macron.png</String>
+										</field>
+										<field name="smallIconPath">
+											<String></String>
+										</field>
+										<field name="accessKey">
+											<String></String>
+										</field>
+										<field name="accelerator">
+											<null/>
+										</field>
+										<field name="actionModes">
+											<actionMode-array>
+												<actionMode>
+													<field name="xpathCondition">
+														<String></String>
+													</field>
+													<field name="argValues">
+														<serializableOrderedMap>
+															<entry>
+																<String>fragment</String>
+																<String>&lt;am xmlns="http://www.tei-c.org/ns/1.0">n̄&lt;/am>&lt;ex xmlns="http://www.tei-c.org/ns/1.0">en&lt;/ex></String>
+															</entry>
+														</serializableOrderedMap>
+													</field>
+													<field name="operationID">
+														<String>ro.sync.ecss.extensions.commons.operations.InsertOrReplaceFragmentOperation</String>
+													</field>
+												</actionMode>
+											</actionMode-array>
+										</field>
+										<field name="enabledInReadOnlyContext">
+											<Boolean>false</Boolean>
+										</field>
+									</action>
+									<action>
+										<field name="id">
+											<String>add</String>
+										</field>
+										<field name="name">
+											<String>add</String>
+										</field>
+										<field name="description">
+											<String>Inserts an &lt;add></String>
+										</field>
+										<field name="largeIconPath">
+											<String></String>
+										</field>
+										<field name="smallIconPath">
+											<String></String>
+										</field>
+										<field name="accessKey">
+											<String></String>
+										</field>
+										<field name="accelerator">
+											<null/>
+										</field>
+										<field name="actionModes">
+											<actionMode-array>
+												<actionMode>
+													<field name="xpathCondition">
+														<String></String>
+													</field>
+													<field name="argValues">
+														<serializableOrderedMap>
+															<entry>
+																<String>fragment</String>
+																<String>&lt;add xmlns="http://www.tei-c.org/ns/1.0" place='${ask('place:', combobox, ('above':'above';'below':'below'))}'>&lt;/add></String>
+															</entry>
+														</serializableOrderedMap>
+													</field>
+													<field name="operationID">
+														<String>ro.sync.ecss.extensions.commons.operations.SurroundWithFragmentOperation</String>
+													</field>
+												</actionMode>
+											</actionMode-array>
+										</field>
+										<field name="enabledInReadOnlyContext">
+											<Boolean>false</Boolean>
+										</field>
+									</action>
+									<action>
+										<field name="id">
+											<String>lb</String>
+										</field>
+										<field name="name">
+											<String>lb</String>
+										</field>
+										<field name="description">
+											<String>Insert a new lb</String>
+										</field>
+										<field name="largeIconPath">
+											<String></String>
+										</field>
+										<field name="smallIconPath">
+											<String></String>
+										</field>
+										<field name="accessKey">
+											<String></String>
+										</field>
+										<field name="accelerator">
+											<null/>
+										</field>
+										<field name="actionModes">
+											<actionMode-array>
+												<actionMode>
+													<field name="xpathCondition">
+														<String></String>
+													</field>
+													<field name="argValues">
+														<serializableOrderedMap>
+															<entry>
+																<String>fragment</String>
+																<String>&lt;lb xmlns="http://www.tei-c.org/ns/1.0"/></String>
+															</entry>
+														</serializableOrderedMap>
+													</field>
+													<field name="operationID">
+														<String>ro.sync.ecss.extensions.commons.operations.InsertFragmentOperation</String>
+													</field>
+												</actionMode>
+											</actionMode-array>
+										</field>
+										<field name="enabledInReadOnlyContext">
+											<Boolean>false</Boolean>
+										</field>
+									</action>
 								</action-array>
 							</field>
 							<field name="menubarDescriptor">
@@ -672,7 +910,7 @@
 										<menuEntry-array>
 											<menuItem>
 												<field name="actionID">
-													<String>n-d</String>
+													<String>abbr</String>
 												</field>
 											</menuItem>
 										</menuEntry-array>
@@ -722,7 +960,7 @@
 											</menuItem>
 											<menuItem>
 												<field name="actionID">
-													<String>n-d</String>
+													<String>abbr</String>
 												</field>
 											</menuItem>
 										</menuEntry-array>
@@ -750,6 +988,11 @@
 										<toolbarEntry-array>
 											<toolbarItem>
 												<field name="actionID">
+													<String>lb</String>
+												</field>
+											</toolbarItem>
+											<toolbarItem>
+												<field name="actionID">
 													<String>Initial</String>
 												</field>
 											</toolbarItem>
@@ -760,7 +1003,7 @@
 											</toolbarItem>
 											<toolbarItem>
 												<field name="actionID">
-													<String>n-d</String>
+													<String>abbr</String>
 												</field>
 											</toolbarItem>
 											<toolbarItem>
@@ -844,7 +1087,18 @@
 														<toolbarEntry-array>
 															<toolbarItem>
 																<field name="actionID">
+																	<String>abbr</String>
+																</field>
+															</toolbarItem>
+															<toolbarSeparator/>
+															<toolbarItem>
+																<field name="actionID">
 																	<String>n-d</String>
+																</field>
+															</toolbarItem>
+															<toolbarItem>
+																<field name="actionID">
+																	<String>e-n</String>
 																</field>
 															</toolbarItem>
 														</toolbarEntry-array>
@@ -895,7 +1149,22 @@
 														<toolbarEntry-array>
 															<toolbarItem>
 																<field name="actionID">
+																	<String>lb</String>
+																</field>
+															</toolbarItem>
+															<toolbarItem>
+																<field name="actionID">
+																	<String>add</String>
+																</field>
+															</toolbarItem>
+															<toolbarItem>
+																<field name="actionID">
 																	<String>note</String>
+																</field>
+															</toolbarItem>
+															<toolbarItem>
+																<field name="actionID">
+																	<String>pb</String>
 																</field>
 															</toolbarItem>
 															<toolbarItem>
@@ -996,7 +1265,7 @@
 									<String>*</String>
 								</field>
 								<field name="fileName">
-									<String>iwein*</String>
+									<String>*</String>
 								</field>
 								<field name="publicID">
 									<String>*</String>
@@ -1005,13 +1274,13 @@
 									<String></String>
 								</field>
 								<field name="attributeLocalName">
-									<String>*</String>
+									<String>type</String>
 								</field>
 								<field name="attributeNamespace">
 									<String>*</String>
 								</field>
 								<field name="attributeValue">
-									<String>*</String>
+									<String>reimpaar_frame</String>
 								</field>
 							</documentTypeRule>
 						</documentTypeRule-array>
@@ -1028,17 +1297,17 @@
 											<field name="validationType">
 												<validationUnitType>
 													<field name="validationInputType">
-														<String>text/sch</String>
+														<String>text/xml</String>
 													</field>
 												</validationUnitType>
 											</field>
 											<field name="url">
-												<String>${framework}/schemas/line.sch</String>
+												<String>${currentFileURL}</String>
 											</field>
 											<field name="validationEngine">
 												<validationEngine>
 													<field name="engineType">
-														<String>&lt;Default engine></String>
+														<String>Xerces</String>
 													</field>
 													<field name="allowsAutomaticValidation">
 														<Boolean>true</Boolean>
@@ -1061,14 +1330,14 @@
 									<String>Validation_scenario</String>
 								</field>
 								<field name="name">
-									<String>iwein</String>
+									<String>line</String>
 								</field>
 							</validationScenario>
 						</validationScenario-array>
 					</field>
 					<field name="defaultValidationScenarios">
 						<list>
-							<String>iwein</String>
+							<String>line</String>
 						</list>
 					</field>
 					<field name="defaultTransformationScenarios">

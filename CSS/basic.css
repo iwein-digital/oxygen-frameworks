@@ -81,5 +81,9 @@ cb {
     -oxy-append-content: oxy_attributes(); 
 }
 
+lb {
+    content: "|";
+    -oxy-display-tags: none;
+}
 
 
