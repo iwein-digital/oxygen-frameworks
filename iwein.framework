@@ -93,7 +93,7 @@
 											<actionMode-array>
 												<actionMode>
 													<field name="xpathCondition">
-														<String></String>
+														<String>ancestor-or-self::l</String>
 													</field>
 													<field name="argValues">
 														<serializableOrderedMap>
