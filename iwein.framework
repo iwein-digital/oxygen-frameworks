@@ -363,7 +363,7 @@ else ancestor::l</String>
 											<String>Initial</String>
 										</field>
 										<field name="name">
-											<String>initial(red)</String>
+											<String>initial</String>
 										</field>
 										<field name="description">
 											<String>INITIAL: inserts a red initial (&lt;hi rend="init color:red">XXX&lt;/hi> ) – SHORTCUT: CTRL + I</String>
@@ -390,7 +390,7 @@ else ancestor::l</String>
 														<serializableOrderedMap>
 															<entry>
 																<String>fragment</String>
-																<String>&lt;hi xmlns="http://www.tei-c.org/ns/1.0" rend="init color:red">&lt;/hi></String>
+																<String>&lt;hi xmlns="http://www.tei-c.org/ns/1.0" rend="initial color:${ask('color:', combobox,('red':'red';'blue':'blue'))}">&lt;/hi></String>
 															</entry>
 														</serializableOrderedMap>
 													</field>

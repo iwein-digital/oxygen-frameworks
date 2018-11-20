@@ -69,13 +69,13 @@ hi[rend~="color:blue"][rend~="decoration"]{
     text-decoration: underline;
     text-decoration-color: blue;
 }
-hi[rend~="init"]{
+hi[rend~="initial"]{
     font-weight: bold;
 }
-hi[rend~="color:red"][rend~="init"]{
+hi[rend~="color:red"][rend~="initial"]{
     color: red;
 }
-hi[rend~="color:blue"][rend~="init"]{
+hi[rend~="color:blue"][rend~="initial"]{
     color: blue;
 }
 
