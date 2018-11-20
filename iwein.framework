@@ -1565,8 +1565,11 @@ else ancestor::l</String>
 															<entry>
 																<String>elementLocation</String>
 																<String>if (self::lb)
-then .
-else preceding-sibling::lb[last()]</String>
+  then .
+  else ( if (self::l)
+    then ./lb
+    else preceding::lb[1]
+    )</String>
 															</entry>
 															<entry>
 																<String>name</String>
