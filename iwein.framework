@@ -57,6 +57,28 @@
 											<Boolean>true</Boolean>
 										</field>
 									</cssFile>
+									<cssFile>
+										<field name="href">
+											<String>${framework}/CSS/orig.css</String>
+										</field>
+										<field name="title">
+											<String>show-orig</String>
+										</field>
+										<field name="alternate">
+											<Boolean>true</Boolean>
+										</field>
+									</cssFile>
+									<cssFile>
+										<field name="href">
+											<String>${framework}/CSS/reg.css</String>
+										</field>
+										<field name="title">
+											<String>show-reg</String>
+										</field>
+										<field name="alternate">
+											<Boolean>true</Boolean>
+										</field>
+									</cssFile>
 								</cssFile-array>
 							</field>
 							<field name="mergeCSSsFromDocument">
@@ -390,7 +412,7 @@ else ancestor::l</String>
 														<serializableOrderedMap>
 															<entry>
 																<String>fragment</String>
-																<String>&lt;hi xmlns="http://www.tei-c.org/ns/1.0" rend="initial color:${ask('color:', combobox,('red':'red';'blue':'blue'))}">&lt;/hi></String>
+																<String>&lt;hi xmlns="http://www.tei-c.org/ns/1.0" rend="initial color:${ask('color:', combobox,('red':'red';'blue':'blue'))}" n="${ask('Heigth (lines):', generic)}">&lt;/hi></String>
 															</entry>
 														</serializableOrderedMap>
 													</field>
@@ -879,7 +901,7 @@ else ancestor::l</String>
 														<serializableOrderedMap>
 															<entry>
 																<String>fragment</String>
-																<String>&lt;pc xmlns="http://www.tei-c.org/ns/1.0" type="manuscript">&lt;/pc></String>
+																<String>&lt;pc xmlns="http://www.tei-c.org/ns/1.0" type="ms">&lt;/pc></String>
 															</entry>
 														</serializableOrderedMap>
 													</field>
@@ -1910,7 +1932,7 @@ else ancestor::l</String>
 											<String></String>
 										</field>
 										<field name="accelerator">
-											<null/>
+											<String>M1 M2 R</String>
 										</field>
 										<field name="actionModes">
 											<actionMode-array>
@@ -2474,9 +2496,7 @@ else ancestor::l</String>
 						</validationScenario-array>
 					</field>
 					<field name="defaultValidationScenarios">
-						<list>
-							<String>line</String>
-						</list>
+						<null/>
 					</field>
 					<field name="defaultTransformationScenarios">
 						<null/>
