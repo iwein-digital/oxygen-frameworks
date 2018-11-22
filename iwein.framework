@@ -1971,6 +1971,52 @@ else ancestor::l</String>
 											<Boolean>false</Boolean>
 										</field>
 									</action>
+									<action>
+										<field name="id">
+											<String>rubric</String>
+										</field>
+										<field name="name">
+											<String>rubric</String>
+										</field>
+										<field name="description">
+											<String>RUBRIC: inserts a &lt;hi rend="color:red">XXX&lt;/hi> SHORTCUT: CTRL + R</String>
+										</field>
+										<field name="largeIconPath">
+											<String>file:/Users/gusriva/Desktop/Screen%20Shot%202018-10-09%20at%2017.38.06.png</String>
+										</field>
+										<field name="smallIconPath">
+											<String></String>
+										</field>
+										<field name="accessKey">
+											<String></String>
+										</field>
+										<field name="accelerator">
+											<String>M1 R</String>
+										</field>
+										<field name="actionModes">
+											<actionMode-array>
+												<actionMode>
+													<field name="xpathCondition">
+														<String></String>
+													</field>
+													<field name="argValues">
+														<serializableOrderedMap>
+															<entry>
+																<String>fragment</String>
+																<String>&lt;hi xmlns="http://www.tei-c.org/ns/1.0" rend="color:red">&lt;/hi></String>
+															</entry>
+														</serializableOrderedMap>
+													</field>
+													<field name="operationID">
+														<String>ro.sync.ecss.extensions.commons.operations.SurroundWithFragmentOperation</String>
+													</field>
+												</actionMode>
+											</actionMode-array>
+										</field>
+										<field name="enabledInReadOnlyContext">
+											<Boolean>false</Boolean>
+										</field>
+									</action>
 								</action-array>
 							</field>
 							<field name="menubarDescriptor">
@@ -2304,6 +2350,11 @@ else ancestor::l</String>
 															<toolbarSeparator/>
 															<toolbarItem>
 																<field name="actionID">
+																	<String>rubric</String>
+																</field>
+															</toolbarItem>
+															<toolbarItem>
+																<field name="actionID">
 																	<String>decoration</String>
 																</field>
 															</toolbarItem>
@@ -2327,7 +2378,6 @@ else ancestor::l</String>
 																	<String>note</String>
 																</field>
 															</toolbarItem>
-															<toolbarSeparator/>
 															<toolbarSeparator/>
 															<toolbarItem>
 																<field name="actionID">

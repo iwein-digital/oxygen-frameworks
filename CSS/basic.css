@@ -61,6 +61,10 @@ hi{
     	border-color: red;*/
 }
 
+hi[rend~="color:red"]{
+    color: red;
+}
+
 hi[rend~="color:red"][rend~="decoration"]{
     text-decoration: underline;
     text-decoration-color: red;
@@ -92,6 +96,10 @@ lb {
     font-size: small;
     content: "("attr(n)")";
     -oxy-display-tags: none;
+}
+
+l[rend~="indent"]{
+    margin-left: 20px;    
 }
 
 
