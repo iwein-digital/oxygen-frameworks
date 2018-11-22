@@ -10,3 +10,4 @@ In this file there are some recommendations and tips on how to set up your work 
  + l
  + p
  + subst
+ + w
