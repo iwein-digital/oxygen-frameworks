@@ -1,4 +1,4 @@
-#Recommendations
+# Recommendations
 
 In this file there are some recommendations and tips on how to set up your work environment to use the framework.
 
