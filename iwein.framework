@@ -168,7 +168,7 @@ nw2</String>
 														<serializableOrderedMap>
 															<entry>
 																<String>fragment</String>
-																<String>&lt;am xmlns="http://www.tei-c.org/ns/1.0">${ask('base letter', generic, '${selection}')}${ask('abbreviation:', radio, ('̄':' ̄ Macron'; '᷒':' ᷒ -er'))}&lt;/am>&lt;ex xmlns="http://www.tei-c.org/ns/1.0">${ask('expansion:')}&lt;/ex>${caret} </String>
+																<String>&lt;choice xmlns="http://www.tei-c.org/ns/1.0">&lt;am xmlns="http://www.tei-c.org/ns/1.0">${ask('base letter', generic, '${selection}')}${ask('abbreviation:', radio,('̄':'  ̄ Macron'; '᷒':' ᷒ -er'))}&lt;/am>&lt;ex xmlns="http://www.tei-c.org/ns/1.0">${ask('expansion:')}&lt;/ex>&lt;/choice>${caret}</String>
 															</entry>
 														</serializableOrderedMap>
 													</field>
@@ -808,7 +808,7 @@ else ancestor::l</String>
 														<serializableOrderedMap>
 															<entry>
 																<String>fragment</String>
-																<String>&lt;lb xmlns="http://www.tei-c.org/ns/1.0" n="${ask('line number:')}/></String>
+																<String>&lt;lb xmlns="http://www.tei-c.org/ns/1.0" n="${ask('line number:')}"/></String>
 															</entry>
 														</serializableOrderedMap>
 													</field>

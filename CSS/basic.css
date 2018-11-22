@@ -61,27 +61,37 @@ hi{
     	border-color: red;*/
 }
 
-hi[rend~="color:red"]{
+*[rend~="color:red"]{
     color: red;
+}
+
+*[rend~="color:blue"]{
+    color: blue;
+}
+
+*[rend~="color:gold"]{
+    color: gold;
 }
 
 hi[rend~="color:red"][rend~="decoration"]{
     text-decoration: underline;
     text-decoration-color: red;
+    color: black;
 }
 hi[rend~="color:blue"][rend~="decoration"]{
     text-decoration: underline;
     text-decoration-color: blue;
+    color: black;
 }
 hi[rend~="initial"]{
     font-weight: bold;
 }
-hi[rend~="color:red"][rend~="initial"]{
+/*hi[rend~="color:red"][rend~="initial"]{
     color: red;
-}
-hi[rend~="color:blue"][rend~="initial"]{
+}*/
+/*hi[rend~="color:blue"][rend~="initial"]{
     color: blue;
-}
+}*/
 
 pb {
     content: "pb";
@@ -100,6 +110,20 @@ lb {
 
 l[rend~="indent"]{
     margin-left: 20px;    
+}
+
+p{
+    font-size: large;
+    display: block;
+}
+
+head{
+    display: block;
+    font-size: large;
+}
+
+choice {
+    -oxy-display-tags: none;
 }
 
 
