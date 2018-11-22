@@ -1944,20 +1944,15 @@ else ancestor::l</String>
 														<serializableOrderedMap>
 															<entry>
 																<String>fragment</String>
-																<String>&lt;choice xmlns="http://www.tei-c.org/ns/1.0">&lt;orig xmlns="http://www.tei-c.org/ns/1.0">${selection}&lt;/orig>&lt;reg xmlns="http://www.tei-c.org/ns/1.0">${xpath_eval(
-  if ('${selection}' = 'u') 
-    then'v' 
-    else (if ('${selection}' = 'v')
-      then 'u'
-      else ( if ('${selection}' = 'j')
-        then 'i'
-        else ( if ('${selection}' = 'i')
-          then 'j'
-          else ()
-        )
-      )
-    )
-    )}&lt;/reg>&lt;/choice></String>
+																<String>&lt;choice xmlns="http://www.tei-c.org/ns/1.0">&lt;orig xmlns="http://www.tei-c.org/ns/1.0">${selection}&lt;/orig>&lt;reg xmlns="http://www.tei-c.org/ns/1.0">${xpath_eval(if ('${selection}' = 'u') 
+then'v' 
+else (if ('${selection}' = 'v')
+  then 'u'
+  else ( if ('${selection}' = 'j')
+    then 'i'
+    else ( if ('${selection}' = 'i')
+      then 'j'
+      else ()))))}&lt;/reg>&lt;/choice></String>
 															</entry>
 														</serializableOrderedMap>
 													</field>
