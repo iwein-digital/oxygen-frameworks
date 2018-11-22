@@ -14,7 +14,7 @@ In the section *Elements Spacing* go to 'Mixed Content'. Add the following eleme
  + l
  + p
  + subst
+ + w
 
 3. Allow for long lines without line breaks:
 Go to 'Options' -> 'Preferences'. Select the tab 'Editor' -> 'Format'. In the section *Format and Indent* uncheck all options and set 'Line width' to a high number (for example 10000)
-
