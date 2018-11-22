@@ -85,6 +85,7 @@ hi[rend~="color:blue"][rend~="decoration"]{
 }
 hi[rend~="initial"]{
     font-weight: bold;
+    font-size: xx-large;
 }
 /*hi[rend~="color:red"][rend~="initial"]{
     color: red;

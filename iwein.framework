@@ -412,7 +412,7 @@ else ancestor::l</String>
 														<serializableOrderedMap>
 															<entry>
 																<String>fragment</String>
-																<String>&lt;hi xmlns="http://www.tei-c.org/ns/1.0" rend="initial color:${ask('color:', combobox,('red':'red';'blue':'blue'))}" n="${ask('Heigth (lines):', generic)}">&lt;/hi></String>
+																<String>&lt;hi xmlns="http://www.tei-c.org/ns/1.0" rend="initial color:${ask('color:', combobox,('red':'red';'blue':'blue';'gold':'gold'))}" n="${ask('Heigth (lines):', generic)}">&lt;/hi></String>
 															</entry>
 														</serializableOrderedMap>
 													</field>
@@ -877,7 +877,7 @@ else ancestor::l</String>
 											<String>pc</String>
 										</field>
 										<field name="description">
-											<String>Inserts an &lt;pc type="manuscript"></String>
+											<String>Inserts an &lt;pc type="ms"></String>
 										</field>
 										<field name="largeIconPath">
 											<String></String>
@@ -2017,6 +2017,52 @@ else ancestor::l</String>
 											<Boolean>false</Boolean>
 										</field>
 									</action>
+									<action>
+										<field name="id">
+											<String>metamark</String>
+										</field>
+										<field name="name">
+											<String>metamark</String>
+										</field>
+										<field name="description">
+											<String>Inserts an &lt;metamark></String>
+										</field>
+										<field name="largeIconPath">
+											<String></String>
+										</field>
+										<field name="smallIconPath">
+											<String></String>
+										</field>
+										<field name="accessKey">
+											<String></String>
+										</field>
+										<field name="accelerator">
+											<null/>
+										</field>
+										<field name="actionModes">
+											<actionMode-array>
+												<actionMode>
+													<field name="xpathCondition">
+														<String></String>
+													</field>
+													<field name="argValues">
+														<serializableOrderedMap>
+															<entry>
+																<String>fragment</String>
+																<String>&lt;metamark xmlns="http://www.tei-c.org/ns/1.0">&lt;/metamark></String>
+															</entry>
+														</serializableOrderedMap>
+													</field>
+													<field name="operationID">
+														<String>ro.sync.ecss.extensions.commons.operations.SurroundWithFragmentOperation</String>
+													</field>
+												</actionMode>
+											</actionMode-array>
+										</field>
+										<field name="enabledInReadOnlyContext">
+											<Boolean>false</Boolean>
+										</field>
+									</action>
 								</action-array>
 							</field>
 							<field name="menubarDescriptor">
@@ -2339,20 +2385,15 @@ else ancestor::l</String>
 															<toolbarSeparator/>
 															<toolbarItem>
 																<field name="actionID">
-																	<String>pb</String>
-																</field>
-															</toolbarItem>
-															<toolbarItem>
-																<field name="actionID">
 																	<String>cb</String>
 																</field>
 															</toolbarItem>
-															<toolbarSeparator/>
 															<toolbarItem>
 																<field name="actionID">
-																	<String>rubric</String>
+																	<String>pb</String>
 																</field>
 															</toolbarItem>
+															<toolbarSeparator/>
 															<toolbarItem>
 																<field name="actionID">
 																	<String>decoration</String>
@@ -2365,12 +2406,18 @@ else ancestor::l</String>
 															</toolbarItem>
 															<toolbarItem>
 																<field name="actionID">
-																	<String>pc</String>
+																	<String>rubric</String>
+																</field>
+															</toolbarItem>
+															<toolbarSeparator/>
+															<toolbarItem>
+																<field name="actionID">
+																	<String>lb</String>
 																</field>
 															</toolbarItem>
 															<toolbarItem>
 																<field name="actionID">
-																	<String>lb</String>
+																	<String>pc</String>
 																</field>
 															</toolbarItem>
 															<toolbarItem>
