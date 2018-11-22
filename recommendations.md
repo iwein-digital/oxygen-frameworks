@@ -8,7 +8,7 @@ In this file there are some recommendations and tips on how to set up your work 
 
 3. Set the 'Elements Spacing' options to avoid inconveniences. Go to 'Options' -> 'Preferences'. Select the tab 'Editor' -> 'Format' -> 'XML':
 
-   In the section *Format*, make sure 'Preserve Text as it is' in selected, and all other options are not selected.
+   In the section *Format*, make sure 'Preserve Text as it is' is selected, and all other options are not selected.
    In the section *Elements Spacing* go to 'Mixed Content'. Add the following elements using the 'add' button:
    - choice
    - hi
