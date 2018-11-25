@@ -808,7 +808,7 @@ else ancestor::l</String>
 														<serializableOrderedMap>
 															<entry>
 																<String>fragment</String>
-																<String>&lt;lb xmlns="http://www.tei-c.org/ns/1.0" n="${ask('line number:')}"/></String>
+																<String>&lt;lb xmlns="http://www.tei-c.org/ns/1.0" n="${ask('line number:',generic,(),'${xpath_eval(xs:integer(following::l[1]/preceding::lb[1]/@n+1))}')}"/></String>
 															</entry>
 														</serializableOrderedMap>
 													</field>
