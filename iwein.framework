@@ -889,7 +889,7 @@ else ancestor::l</String>
 											<String></String>
 										</field>
 										<field name="accelerator">
-											<null/>
+											<String>meta PERIOD</String>
 										</field>
 										<field name="actionModes">
 											<actionMode-array>
@@ -2100,7 +2100,7 @@ else ancestor::w</String>
 															</entry>
 															<entry>
 																<String>value</String>
-																<String>${ask('Part', combobox,('I':'Initial';'F':'Final'), @part)}</String>
+																<String>${ask('Part', combobox,('I':'Initial';'F':'Final'))}</String>
 															</entry>
 														</serializableOrderedMap>
 													</field>
@@ -2348,7 +2348,8 @@ else ancestor::w</String>
 																<String>actionIDs</String>
 																<String>bw1
 bw2
-bw3</String>
+bw3
+bw4</String>
 															</entry>
 														</serializableOrderedMap>
 													</field>
@@ -2388,13 +2389,13 @@ bw3</String>
 											<actionMode-array>
 												<actionMode>
 													<field name="xpathCondition">
-														<String>self::w[@part='I']</String>
+														<String>ancestor-or-self::w[@part='I'][following-sibling::w[1]]</String>
 													</field>
 													<field name="argValues">
 														<serializableOrderedMap>
 															<entry>
 																<String>elementLocation</String>
-																<String>following::w[1]</String>
+																<String>ancestor-or-self::w/following-sibling::w[1]</String>
 															</entry>
 															<entry>
 																<String>name</String>
@@ -2442,7 +2443,7 @@ bw3</String>
 											<actionMode-array>
 												<actionMode>
 													<field name="xpathCondition">
-														<String>self::w[@part='F']</String>
+														<String>ancestor-or-self::w[@part='F'][preceding-sibling::w[1]]</String>
 													</field>
 													<field name="argValues">
 														<serializableOrderedMap>
@@ -2462,6 +2463,56 @@ bw3</String>
 													</field>
 													<field name="operationID">
 														<String>ro.sync.ecss.extensions.commons.operations.ChangeAttributeOperation</String>
+													</field>
+												</actionMode>
+											</actionMode-array>
+										</field>
+										<field name="enabledInReadOnlyContext">
+											<Boolean>false</Boolean>
+										</field>
+									</action>
+									<action>
+										<field name="id">
+											<String>bw4</String>
+										</field>
+										<field name="name">
+											<String>bw4</String>
+										</field>
+										<field name="description">
+											<String>bw4 moves caret</String>
+										</field>
+										<field name="largeIconPath">
+											<String></String>
+										</field>
+										<field name="smallIconPath">
+											<String></String>
+										</field>
+										<field name="accessKey">
+											<String></String>
+										</field>
+										<field name="accelerator">
+											<null/>
+										</field>
+										<field name="actionModes">
+											<actionMode-array>
+												<actionMode>
+													<field name="xpathCondition">
+														<String></String>
+													</field>
+													<field name="argValues">
+														<serializableOrderedMap>
+															<entry>
+																<String>position</String>
+																<String>Inside, at the end</String>
+															</entry>
+															<entry>
+																<String>xpathLocation</String>
+																<String>.</String>
+															</entry>
+														</serializableOrderedMap>
+													</field>
+													<field name="operationID">
+														<String>ro.sync.ecss.extensions.commons.operations.MoveCaretOperation</String>
 													</field>
 												</actionMode>
 											</actionMode-array>
