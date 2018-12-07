@@ -18,7 +18,7 @@ div {
 
 lg{
     margin: 3px;
-    font-size: xx-small;
+    font-size: small;
     -oxy-prepend-content: "lg";
     padding: 0px;
 }
