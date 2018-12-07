@@ -807,13 +807,14 @@ else ancestor::l</String>
 													<field name="argValues">
 														<serializableOrderedMap>
 															<entry>
-																<String>fragment</String>
-																<String>&lt;lb xmlns="http://www.tei-c.org/ns/1.0" n="${ask('line number:',generic,(),'${xpath_eval(xs:integer(following::l[1]/preceding::lb[1]/@n+1))}')}"/></String>
+																<String>actionIDs</String>
+																<String>lb1
+lb2</String>
 															</entry>
 														</serializableOrderedMap>
 													</field>
 													<field name="operationID">
-														<String>ro.sync.ecss.extensions.commons.operations.InsertFragmentOperation</String>
+														<String>ro.sync.ecss.extensions.commons.operations.ExecuteMultipleActionsOperation</String>
 													</field>
 												</actionMode>
 											</actionMode-array>
@@ -2928,6 +2929,121 @@ else ancestor::w</String>
 															<entry>
 																<String>insertPosition</String>
 																<String>After</String>
+															</entry>
+														</serializableOrderedMap>
+													</field>
+													<field name="operationID">
+														<String>ro.sync.ecss.extensions.commons.operations.InsertFragmentOperation</String>
+													</field>
+												</actionMode>
+											</actionMode-array>
+										</field>
+										<field name="enabledInReadOnlyContext">
+											<Boolean>false</Boolean>
+										</field>
+									</action>
+									<action>
+										<field name="id">
+											<String>lb1</String>
+										</field>
+										<field name="name">
+											<String>lb1</String>
+										</field>
+										<field name="description">
+											<String>lb1</String>
+										</field>
+										<field name="largeIconPath">
+											<String></String>
+										</field>
+										<field name="smallIconPath">
+											<String></String>
+										</field>
+										<field name="accessKey">
+											<String></String>
+										</field>
+										<field name="accelerator">
+											<null/>
+										</field>
+										<field name="actionModes">
+											<actionMode-array>
+												<actionMode>
+													<field name="xpathCondition">
+														<String>ancestor::l</String>
+													</field>
+													<field name="argValues">
+														<serializableOrderedMap>
+															<entry>
+																<String>fragment</String>
+																<String>&lt;lb xmlns="http://www.tei-c.org/ns/1.0" n="${ask('line number:',generic,(),'${xpath_eval(xs:integer(following::l[1]/preceding::lb[1]/@n+1))}')}"/></String>
+															</entry>
+															<entry>
+																<String>insertLocation</String>
+																<String>if (self::w or self::pc or self::lb)
+  then .
+  else ( if (self::l)
+      then ( if (descendant::w)
+          then descendant::w[last()]
+          else ./text() )
+      else ./..
+  )</String>
+															</entry>
+															<entry>
+																<String>insertPosition</String>
+																<String>After</String>
+															</entry>
+														</serializableOrderedMap>
+													</field>
+													<field name="operationID">
+														<String>ro.sync.ecss.extensions.commons.operations.InsertFragmentOperation</String>
+													</field>
+												</actionMode>
+											</actionMode-array>
+										</field>
+										<field name="enabledInReadOnlyContext">
+											<Boolean>false</Boolean>
+										</field>
+									</action>
+									<action>
+										<field name="id">
+											<String>lb2</String>
+										</field>
+										<field name="name">
+											<String>lb2</String>
+										</field>
+										<field name="description">
+											<String>lb2</String>
+										</field>
+										<field name="largeIconPath">
+											<String></String>
+										</field>
+										<field name="smallIconPath">
+											<String></String>
+										</field>
+										<field name="accessKey">
+											<String></String>
+										</field>
+										<field name="accelerator">
+											<null/>
+										</field>
+										<field name="actionModes">
+											<actionMode-array>
+												<actionMode>
+													<field name="xpathCondition">
+														<String>self::l</String>
+													</field>
+													<field name="argValues">
+														<serializableOrderedMap>
+															<entry>
+																<String>fragment</String>
+																<String>&lt;lb xmlns="http://www.tei-c.org/ns/1.0" n="${ask('line number:',generic,(),'${xpath_eval(xs:integer(following::l[1]/preceding::lb[1]/@n+1))}')}"/></String>
+															</entry>
+															<entry>
+																<String>insertLocation</String>
+																<String></String>
+															</entry>
+															<entry>
+																<String>insertPosition</String>
+																<String>Inside as last child</String>
 															</entry>
 														</serializableOrderedMap>
 													</field>
