@@ -9,12 +9,18 @@
     /*-oxy-foldable:true;*/
 }
 
+div {
+    font-size: xx-small;
+    padding: 0em;
+    margin: 0em;
+}
 
 
 lg{
-    margin: 10px;
+    margin: 3px;
     font-size: xx-small;
     -oxy-prepend-content: "lg";
+    padding: 0px;
 }
 
 w {
