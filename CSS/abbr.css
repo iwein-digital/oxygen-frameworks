@@ -6,7 +6,7 @@
 
 am:hover + ex{
     visibility: visible;
-    background-color:red;
+    background-color:#e6e6fa;
 }
 
 ex {

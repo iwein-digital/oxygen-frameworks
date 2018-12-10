@@ -6,6 +6,7 @@ ex {
 
 choice:hover > am {
     visibility: visible;
+    background-color:#e6e6fa;
 }
 
 am {
