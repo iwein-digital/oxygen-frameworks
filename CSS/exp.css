@@ -1,7 +1,15 @@
-﻿am {
-	-oxy-display-tags: none;
-	visibility:-oxy-collapse-text;
-}
+﻿
 ex {
 	-oxy-display-tags: none;
+	font: bold;
+}
+
+choice:hover > am {
+    visibility: visible;
+}
+
+am {
+	-oxy-display-tags: none;
+	visibility:-oxy-collapse-text;
+	font-size: smaller;
 }
