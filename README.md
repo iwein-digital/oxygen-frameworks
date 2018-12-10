@@ -4,7 +4,7 @@ Installation:
 
 1- Find your installation directory for Oxygen. Inside it you should be able to locate the folder 'frameworks'. 
 
-2- Copy or Clone this repository into a new folder inside that directory. You are free to name that folder anyway you like, but the name *Iwein* is suggested. (In some Operative Systems you need to have administrator privileges to be able to do this).
+2- Copy or Clone this repository into a new folder inside that directory. You are free to name that folder anyway you like, but the name *Iwein* is suggested. (In some Operative Systems you need to have administrator privileges to be able to do this. If you are not allowed to install in that folder, you can install it in another directory and it will still work).
 
 3- In Oxygen, go to Options -> Preferences. Look for the tab 'Document Type Association'. You should see that 'Iwein' is listed there as one possible Framework to use. If not, go to 'Locations' under 'Document Type Association' and make sure that the path to the folder where the framework is located is selected.
 
