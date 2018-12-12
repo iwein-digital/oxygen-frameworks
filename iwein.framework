@@ -3333,6 +3333,52 @@ pc2</String>
 											<Boolean>false</Boolean>
 										</field>
 									</action>
+									<action>
+										<field name="id">
+											<String>vn->und</String>
+										</field>
+										<field name="name">
+											<String>vn->vnd</String>
+										</field>
+										<field name="description">
+											<String>writes the complete version of vn̄, with regularization and abbreviation</String>
+										</field>
+										<field name="largeIconPath">
+											<String></String>
+										</field>
+										<field name="smallIconPath">
+											<String></String>
+										</field>
+										<field name="accessKey">
+											<String></String>
+										</field>
+										<field name="accelerator">
+											<String>M1 M2 U</String>
+										</field>
+										<field name="actionModes">
+											<actionMode-array>
+												<actionMode>
+													<field name="xpathCondition">
+														<String></String>
+													</field>
+													<field name="argValues">
+														<serializableOrderedMap>
+															<entry>
+																<String>fragment</String>
+																<String>&lt;choice xmlns="http://www.tei-c.org/ns/1.0">&lt;orig xmlns="http://www.tei-c.org/ns/1.0">v&lt;/orig>&lt;reg xmlns="http://www.tei-c.org/ns/1.0">u&lt;/reg>&lt;choice xmlns="http://www.tei-c.org/ns/1.0">&lt;am xmlns="http://www.tei-c.org/ns/1.0">n̄&lt;/am>&lt;ex xmlns="http://www.tei-c.org/ns/1.0">nd&lt;/ex>&lt;/choice>&lt;/choice></String>
+															</entry>
+														</serializableOrderedMap>
+													</field>
+													<field name="operationID">
+														<String>ro.sync.ecss.extensions.commons.operations.InsertFragmentOperation</String>
+													</field>
+												</actionMode>
+											</actionMode-array>
+										</field>
+										<field name="enabledInReadOnlyContext">
+											<Boolean>false</Boolean>
+										</field>
+									</action>
 								</action-array>
 							</field>
 							<field name="menubarDescriptor">
@@ -3780,6 +3826,29 @@ pc2</String>
 															<toolbarItem>
 																<field name="actionID">
 																	<String>new-w</String>
+																</field>
+															</toolbarItem>
+														</toolbarEntry-array>
+													</field>
+												</toolbar>
+												<toolbar>
+													<field name="id">
+														<String>Full Words</String>
+													</field>
+													<field name="type">
+														<Integer>3</Integer>
+													</field>
+													<field name="largeIconPath">
+														<String></String>
+													</field>
+													<field name="smallIconPath">
+														<String></String>
+													</field>
+													<field name="toolbarEntriesDescriptorList">
+														<toolbarEntry-array>
+															<toolbarItem>
+																<field name="actionID">
+																	<String>vn->und</String>
 																</field>
 															</toolbarItem>
 														</toolbarEntry-array>
