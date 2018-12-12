@@ -168,7 +168,7 @@ nw2</String>
 														<serializableOrderedMap>
 															<entry>
 																<String>fragment</String>
-																<String>&lt;choice xmlns="http://www.tei-c.org/ns/1.0">&lt;am xmlns="http://www.tei-c.org/ns/1.0">${ask('base letter', generic, '${selection}')}${ask('abbreviation:', radio,('̄':'  ̄ Macron'; '᷒':' ᷒ -er'))}&lt;/am>&lt;ex xmlns="http://www.tei-c.org/ns/1.0">${ask('expansion:')}&lt;/ex>&lt;/choice>${caret}</String>
+																<String>&lt;choice xmlns="http://www.tei-c.org/ns/1.0">&lt;am xmlns="http://www.tei-c.org/ns/1.0">${ask('base letter', generic, '${selection}')}${ask('abbreviation:', radio,('̄':'  ̄ Macron'; '͛':' ͛ er'))}&lt;/am>&lt;ex xmlns="http://www.tei-c.org/ns/1.0">${ask('expansion:')}&lt;/ex>&lt;/choice>${caret}</String>
 															</entry>
 														</serializableOrderedMap>
 													</field>
@@ -1062,7 +1062,7 @@ lb2</String>
 														<serializableOrderedMap>
 															<entry>
 																<String>fragment</String>
-																<String>&lt;choice xmlns="http://www.tei-c.org/ns/1.0">&lt;am xmlns="http://www.tei-c.org/ns/1.0">v᷒&lt;/am>&lt;ex xmlns="http://www.tei-c.org/ns/1.0">ver&lt;/ex>&lt;/choice>${caret}</String>
+																<String>&lt;choice xmlns="http://www.tei-c.org/ns/1.0">&lt;am xmlns="http://www.tei-c.org/ns/1.0">v͛&lt;/am>&lt;ex xmlns="http://www.tei-c.org/ns/1.0">ver&lt;/ex>&lt;/choice>${caret}</String>
 															</entry>
 														</serializableOrderedMap>
 													</field>

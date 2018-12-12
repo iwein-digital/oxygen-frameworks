@@ -91,7 +91,7 @@ lb {
 }
 
 lg{
-    margin: 3px;
+    margin-left: 15px;
     font-size: small;
     -oxy-prepend-content: "lg";
     padding: 0px;
