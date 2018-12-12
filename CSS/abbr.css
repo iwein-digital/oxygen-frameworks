@@ -4,14 +4,14 @@
 	font: bold;
 }
 
-am:hover + ex{
-    visibility: visible;
-    background-color:#e6e6fa;
-}
 
 ex {
 	visibility:-oxy-collapse-text;
 	-oxy-display-tags: none;
-	-oxy-prepend-content: "";
 	font-size: smaller;
+}
+
+choice:hover > ex{
+    visibility: visible;
+    background-color:#e6e6fa;
 }

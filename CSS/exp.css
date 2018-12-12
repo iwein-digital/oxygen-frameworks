@@ -9,6 +9,11 @@ choice:hover > am {
     background-color:#e6e6fa;
 }
 
+choice:focus > am {
+    visibility: visible;
+    background-color:#e6e6fa;
+}
+
 am {
 	-oxy-display-tags: none;
 	visibility:-oxy-collapse-text;

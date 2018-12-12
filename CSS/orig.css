@@ -2,8 +2,15 @@
 	-oxy-display-tags: none;
 	font-weight: bold;
 }
+
+choice:hover > reg{
+    visibility: visible;
+    background-color:#e6e6fa;
+}
+
 reg {
 	-oxy-display-tags: none;
 	visibility:-oxy-collapse-text;
+	font-size: smaller;
 }
 
