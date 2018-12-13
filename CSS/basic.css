@@ -70,14 +70,9 @@ hi[rend~="initial"]{
 }
 
 l {
-    /*-oxy-placeholder-content: "line";*/
-    /*-oxy-display-tags:  ;*/
     content: attr(n)"-";
-    /*font-size: 1.5em;*/
     font-size: large;
     display: block;
-    /*-oxy-editable: false;*/
-    /*-oxy-foldable:true;*/
 }
 
 l[rend~="indent"]{
@@ -113,6 +108,17 @@ pb {
     -oxy-append-content: oxy_attributes(); 
 }
 
+teiHeader{
+    visibility:-oxy-collapse-text;
+    -oxy-display-tags: none;
+}
+
+titleStmt > title:first-child {
+    visibility: visible;
+    display: block;
+    font-size: large;
+    font: bold;
+}
 
 w {
     background-color: white;
@@ -120,12 +126,11 @@ w {
     -oxy-placeholder-content: "w";
     -oxy-display-tags: none;
     display: inline;
-/*    -oxy-append-content: " ";
-*/    -oxy-prepend-content: " ";
+    -oxy-prepend-content: " ";
     -oxy-editable: true;
-    /*font-size: 1.5em;	*/
 }
 
 w[join~="left"] {
     -oxy-prepend-content: '–';
 }
+
