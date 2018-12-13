@@ -1192,7 +1192,7 @@ lb2</String>
 											<String></String>
 										</field>
 										<field name="accelerator">
-											<null/>
+											<String>meta shift O</String>
 										</field>
 										<field name="actionModes">
 											<actionMode-array>
@@ -2314,7 +2314,7 @@ else ancestor::w</String>
 											<String></String>
 										</field>
 										<field name="accelerator">
-											<null/>
+											<String>meta B</String>
 										</field>
 										<field name="actionModes">
 											<actionMode-array>
@@ -2667,7 +2667,7 @@ bw4</String>
 											<String></String>
 										</field>
 										<field name="accelerator">
-											<null/>
+											<String>meta J</String>
 										</field>
 										<field name="actionModes">
 											<actionMode-array>
