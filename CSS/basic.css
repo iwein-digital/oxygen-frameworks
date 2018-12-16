@@ -130,7 +130,11 @@ w {
     -oxy-editable: true;
 }
 
-w[join~="left"] {
+w[join~="left"]  {
+    -oxy-prepend-content: '–';
+}
+
+ w[join~="both"]{
     -oxy-prepend-content: '–';
 }
 

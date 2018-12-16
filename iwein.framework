@@ -1571,7 +1571,11 @@ line2</String>
 															</entry>
 															<entry>
 																<String>value</String>
-																<String>${ask('Line Number')}</String>
+																<String>${ask('line number:',generic,(),'${xpath_eval(
+if (preceding::lb[1]/@n != '')
+then xs:integer(preceding::lb[1]/@n+1)
+else xs:integer(preceding::lb[2]/@n+1)
+)}'))}</String>
 															</entry>
 														</serializableOrderedMap>
 													</field>
@@ -3693,206 +3697,6 @@ pc2</String>
 											<toolbarEntry-array>
 												<toolbar>
 													<field name="id">
-														<String>Attributes</String>
-													</field>
-													<field name="type">
-														<Integer>3</Integer>
-													</field>
-													<field name="largeIconPath">
-														<String></String>
-													</field>
-													<field name="smallIconPath">
-														<String></String>
-													</field>
-													<field name="toolbarEntriesDescriptorList">
-														<toolbarEntry-array>
-															<toolbarItem>
-																<field name="actionID">
-																	<String>verse_number</String>
-																</field>
-															</toolbarItem>
-															<toolbarItem>
-																<field name="actionID">
-																	<String>line_number</String>
-																</field>
-															</toolbarItem>
-															<toolbarSeparator/>
-															<toolbarItem>
-																<field name="actionID">
-																	<String>indent</String>
-																</field>
-															</toolbarItem>
-															<toolbarSeparator/>
-															<toolbarItem>
-																<field name="actionID">
-																	<String>join</String>
-																</field>
-															</toolbarItem>
-															<toolbarItem>
-																<field name="actionID">
-																	<String>broken-word</String>
-																</field>
-															</toolbarItem>
-														</toolbarEntry-array>
-													</field>
-												</toolbar>
-												<toolbar>
-													<field name="id">
-														<String>Abbreviations</String>
-													</field>
-													<field name="type">
-														<Integer>3</Integer>
-													</field>
-													<field name="largeIconPath">
-														<String></String>
-													</field>
-													<field name="smallIconPath">
-														<String></String>
-													</field>
-													<field name="toolbarEntriesDescriptorList">
-														<toolbarEntry-array>
-															<toolbarItem>
-																<field name="actionID">
-																	<String>abbr</String>
-																</field>
-															</toolbarItem>
-															<toolbarSeparator/>
-															<toolbarItem>
-																<field name="actionID">
-																	<String>n(d)</String>
-																</field>
-															</toolbarItem>
-															<toolbarItem>
-																<field name="actionID">
-																	<String>(e)n</String>
-																</field>
-															</toolbarItem>
-															<toolbarItem>
-																<field name="actionID">
-																	<String>e(n)</String>
-																</field>
-															</toolbarItem>
-															<toolbarItem>
-																<field name="actionID">
-																	<String>n(e)</String>
-																</field>
-															</toolbarItem>
-															<toolbarItem>
-																<field name="actionID">
-																	<String>v(er)</String>
-																</field>
-															</toolbarItem>
-														</toolbarEntry-array>
-													</field>
-												</toolbar>
-												<toolbar>
-													<field name="id">
-														<String>Special Characters</String>
-													</field>
-													<field name="type">
-														<Integer>3</Integer>
-													</field>
-													<field name="largeIconPath">
-														<String></String>
-													</field>
-													<field name="smallIconPath">
-														<String></String>
-													</field>
-													<field name="toolbarEntriesDescriptorList">
-														<toolbarEntry-array>
-															<toolbarItem>
-																<field name="actionID">
-																	<String>·</String>
-																</field>
-															</toolbarItem>
-															<toolbarItem>
-																<field name="actionID">
-																	<String>vertical line</String>
-																</field>
-															</toolbarItem>
-															<toolbarItem>
-																<field name="actionID">
-																	<String>d.obl.hyphen</String>
-																</field>
-															</toolbarItem>
-															<toolbarSeparator/>
-															<toolbarItem>
-																<field name="actionID">
-																	<String>ae</String>
-																</field>
-															</toolbarItem>
-															<toolbarItem>
-																<field name="actionID">
-																	<String>oe</String>
-																</field>
-															</toolbarItem>
-															<toolbarItem>
-																<field name="actionID">
-																	<String>scharf-s</String>
-																</field>
-															</toolbarItem>
-															<toolbarItem>
-																<field name="actionID">
-																	<String>ÿ</String>
-																</field>
-															</toolbarItem>
-															<toolbarSeparator/>
-															<toolbarItem>
-																<field name="actionID">
-																	<String>dot above</String>
-																</field>
-															</toolbarItem>
-															<toolbarItem>
-																<field name="actionID">
-																	<String>dieresis</String>
-																</field>
-															</toolbarItem>
-															<toolbarItem>
-																<field name="actionID">
-																	<String>macron</String>
-																</field>
-															</toolbarItem>
-															<toolbarItem>
-																<field name="actionID">
-																	<String>vertical line above</String>
-																</field>
-															</toolbarItem>
-															<toolbarSeparator/>
-															<toolbarItem>
-																<field name="actionID">
-																	<String>circumflex</String>
-																</field>
-															</toolbarItem>
-															<toolbarItem>
-																<field name="actionID">
-																	<String>a above</String>
-																</field>
-															</toolbarItem>
-															<toolbarItem>
-																<field name="actionID">
-																	<String>e above</String>
-																</field>
-															</toolbarItem>
-															<toolbarItem>
-																<field name="actionID">
-																	<String>o above</String>
-																</field>
-															</toolbarItem>
-															<toolbarItem>
-																<field name="actionID">
-																	<String>u above</String>
-																</field>
-															</toolbarItem>
-															<toolbarItem>
-																<field name="actionID">
-																	<String>v above - Copy</String>
-																</field>
-															</toolbarItem>
-														</toolbarEntry-array>
-													</field>
-												</toolbar>
-												<toolbar>
-													<field name="id">
 														<String>Insert Tags</String>
 													</field>
 													<field name="type">
@@ -4021,6 +3825,100 @@ pc2</String>
 												</toolbar>
 												<toolbar>
 													<field name="id">
+														<String>Attributes</String>
+													</field>
+													<field name="type">
+														<Integer>3</Integer>
+													</field>
+													<field name="largeIconPath">
+														<String></String>
+													</field>
+													<field name="smallIconPath">
+														<String></String>
+													</field>
+													<field name="toolbarEntriesDescriptorList">
+														<toolbarEntry-array>
+															<toolbarItem>
+																<field name="actionID">
+																	<String>verse_number</String>
+																</field>
+															</toolbarItem>
+															<toolbarItem>
+																<field name="actionID">
+																	<String>line_number</String>
+																</field>
+															</toolbarItem>
+															<toolbarSeparator/>
+															<toolbarItem>
+																<field name="actionID">
+																	<String>indent</String>
+																</field>
+															</toolbarItem>
+															<toolbarSeparator/>
+															<toolbarItem>
+																<field name="actionID">
+																	<String>join</String>
+																</field>
+															</toolbarItem>
+															<toolbarItem>
+																<field name="actionID">
+																	<String>broken-word</String>
+																</field>
+															</toolbarItem>
+														</toolbarEntry-array>
+													</field>
+												</toolbar>
+												<toolbar>
+													<field name="id">
+														<String>Abbreviations</String>
+													</field>
+													<field name="type">
+														<Integer>3</Integer>
+													</field>
+													<field name="largeIconPath">
+														<String></String>
+													</field>
+													<field name="smallIconPath">
+														<String></String>
+													</field>
+													<field name="toolbarEntriesDescriptorList">
+														<toolbarEntry-array>
+															<toolbarItem>
+																<field name="actionID">
+																	<String>abbr</String>
+																</field>
+															</toolbarItem>
+															<toolbarSeparator/>
+															<toolbarItem>
+																<field name="actionID">
+																	<String>n(d)</String>
+																</field>
+															</toolbarItem>
+															<toolbarItem>
+																<field name="actionID">
+																	<String>(e)n</String>
+																</field>
+															</toolbarItem>
+															<toolbarItem>
+																<field name="actionID">
+																	<String>e(n)</String>
+																</field>
+															</toolbarItem>
+															<toolbarItem>
+																<field name="actionID">
+																	<String>n(e)</String>
+																</field>
+															</toolbarItem>
+															<toolbarItem>
+																<field name="actionID">
+																	<String>v(er)</String>
+																</field>
+															</toolbarItem>
+														</toolbarEntry-array>
+													</field>
+												</toolbar>
+												<toolbar>
+													<field name="id">
 														<String>Full Words</String>
 													</field>
 													<field name="type">
@@ -4037,6 +3935,112 @@ pc2</String>
 															<toolbarItem>
 																<field name="actionID">
 																	<String>vn->und</String>
+																</field>
+															</toolbarItem>
+														</toolbarEntry-array>
+													</field>
+												</toolbar>
+												<toolbar>
+													<field name="id">
+														<String>Special Characters</String>
+													</field>
+													<field name="type">
+														<Integer>3</Integer>
+													</field>
+													<field name="largeIconPath">
+														<String></String>
+													</field>
+													<field name="smallIconPath">
+														<String></String>
+													</field>
+													<field name="toolbarEntriesDescriptorList">
+														<toolbarEntry-array>
+															<toolbarItem>
+																<field name="actionID">
+																	<String>·</String>
+																</field>
+															</toolbarItem>
+															<toolbarItem>
+																<field name="actionID">
+																	<String>vertical line</String>
+																</field>
+															</toolbarItem>
+															<toolbarItem>
+																<field name="actionID">
+																	<String>d.obl.hyphen</String>
+																</field>
+															</toolbarItem>
+															<toolbarSeparator/>
+															<toolbarItem>
+																<field name="actionID">
+																	<String>ae</String>
+																</field>
+															</toolbarItem>
+															<toolbarItem>
+																<field name="actionID">
+																	<String>oe</String>
+																</field>
+															</toolbarItem>
+															<toolbarItem>
+																<field name="actionID">
+																	<String>scharf-s</String>
+																</field>
+															</toolbarItem>
+															<toolbarItem>
+																<field name="actionID">
+																	<String>ÿ</String>
+																</field>
+															</toolbarItem>
+															<toolbarSeparator/>
+															<toolbarItem>
+																<field name="actionID">
+																	<String>dot above</String>
+																</field>
+															</toolbarItem>
+															<toolbarItem>
+																<field name="actionID">
+																	<String>dieresis</String>
+																</field>
+															</toolbarItem>
+															<toolbarItem>
+																<field name="actionID">
+																	<String>macron</String>
+																</field>
+															</toolbarItem>
+															<toolbarItem>
+																<field name="actionID">
+																	<String>vertical line above</String>
+																</field>
+															</toolbarItem>
+															<toolbarSeparator/>
+															<toolbarItem>
+																<field name="actionID">
+																	<String>circumflex</String>
+																</field>
+															</toolbarItem>
+															<toolbarItem>
+																<field name="actionID">
+																	<String>a above</String>
+																</field>
+															</toolbarItem>
+															<toolbarItem>
+																<field name="actionID">
+																	<String>e above</String>
+																</field>
+															</toolbarItem>
+															<toolbarItem>
+																<field name="actionID">
+																	<String>o above</String>
+																</field>
+															</toolbarItem>
+															<toolbarItem>
+																<field name="actionID">
+																	<String>u above</String>
+																</field>
+															</toolbarItem>
+															<toolbarItem>
+																<field name="actionID">
+																	<String>v above - Copy</String>
 																</field>
 															</toolbarItem>
 														</toolbarEntry-array>
