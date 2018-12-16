@@ -935,7 +935,7 @@ lb2</String>
 											<String>·</String>
 										</field>
 										<field name="name">
-											<String>·</String>
+											<String>· middle dot</String>
 										</field>
 										<field name="description">
 											<String>·  Inserts the character middle dot.</String>
@@ -985,7 +985,7 @@ lb2</String>
 											<String>macron</String>
 										</field>
 										<field name="name">
-											<String>macron</String>
+											<String>̄ macron</String>
 										</field>
 										<field name="description">
 											<String>̄Inserts a macron</String>
@@ -1127,7 +1127,7 @@ lb2</String>
 											<String>vertical line above</String>
 										</field>
 										<field name="name">
-											<String>vertical line above</String>
+											<String>̍ vert. line above</String>
 										</field>
 										<field name="description">
 											<String>Vertical line above</String>
@@ -1227,7 +1227,7 @@ lb2</String>
 											<String>dieresis</String>
 										</field>
 										<field name="name">
-											<String>dieresis</String>
+											<String>̈ dieresis</String>
 										</field>
 										<field name="description">
 											<String>dieresis</String>
@@ -2245,7 +2245,7 @@ else ancestor::w</String>
 											<String>d.obl.hyphen</String>
 										</field>
 										<field name="name">
-											<String>Double oblique hyphen</String>
+											<String>⸗ Double obli. hyphen</String>
 										</field>
 										<field name="description">
 											<String>Double Oblique Hyphen</String>
@@ -2502,7 +2502,7 @@ bw4</String>
 											<String>dot above</String>
 										</field>
 										<field name="name">
-											<String>dot above</String>
+											<String>̇ dot above</String>
 										</field>
 										<field name="description">
 											<String>dot above</String>
@@ -2552,7 +2552,7 @@ bw4</String>
 											<String>vertical line</String>
 										</field>
 										<field name="name">
-											<String>vertical line</String>
+											<String>| vertical line</String>
 										</field>
 										<field name="description">
 											<String>vertical line (U+007C)</String>
@@ -3182,7 +3182,7 @@ else ancestor::l</String>
 											<String>circumflex</String>
 										</field>
 										<field name="name">
-											<String>circumflex</String>
+											<String>̂ circumflex</String>
 										</field>
 										<field name="description">
 											<String>circumflex</String>
