@@ -2310,7 +2310,7 @@ else ancestor::w</String>
 											<String></String>
 										</field>
 										<field name="accelerator">
-											<String>meta B</String>
+											<String>M1 B</String>
 										</field>
 										<field name="actionModes">
 											<actionMode-array>
@@ -3247,7 +3247,7 @@ else ancestor::l</String>
 											<String></String>
 										</field>
 										<field name="accelerator">
-											<String>meta PERIOD</String>
+											<String>M1 PERIOD</String>
 										</field>
 										<field name="actionModes">
 											<actionMode-array>
