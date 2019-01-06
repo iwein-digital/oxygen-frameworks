@@ -3360,7 +3360,7 @@ pc2</String>
 														<serializableOrderedMap>
 															<entry>
 																<String>fragment</String>
-																<String>&lt;choice xmlns="http://www.tei-c.org/ns/1.0">&lt;orig xmlns="http://www.tei-c.org/ns/1.0">v&lt;/orig>&lt;reg xmlns="http://www.tei-c.org/ns/1.0">u&lt;/reg>&lt;choice xmlns="http://www.tei-c.org/ns/1.0">&lt;am xmlns="http://www.tei-c.org/ns/1.0">n̄&lt;/am>&lt;ex xmlns="http://www.tei-c.org/ns/1.0">nd&lt;/ex>&lt;/choice>&lt;/choice></String>
+																<String>&lt;choice xmlns="http://www.tei-c.org/ns/1.0">&lt;orig xmlns="http://www.tei-c.org/ns/1.0">v&lt;/orig>&lt;reg xmlns="http://www.tei-c.org/ns/1.0">u&lt;/reg>&lt;/choice>&lt;choice xmlns="http://www.tei-c.org/ns/1.0">&lt;am xmlns="http://www.tei-c.org/ns/1.0">n̄&lt;/am>&lt;ex xmlns="http://www.tei-c.org/ns/1.0">nd&lt;/ex>&lt;/choice></String>
 															</entry>
 														</serializableOrderedMap>
 													</field>
