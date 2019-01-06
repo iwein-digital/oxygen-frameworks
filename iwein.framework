@@ -168,7 +168,7 @@ nw2</String>
 														<serializableOrderedMap>
 															<entry>
 																<String>fragment</String>
-																<String>&lt;choice xmlns="http://www.tei-c.org/ns/1.0">&lt;am xmlns="http://www.tei-c.org/ns/1.0">${ask('base letter', generic, '${selection}')}${ask('abbreviation:', radio,('̄':'  ̄ Macron'; '͛':' ͛ er'),'̄')}&lt;/am>&lt;ex xmlns="http://www.tei-c.org/ns/1.0">${ask('expansion:', generic)}&lt;/ex>&lt;/choice>${caret}</String>
+																<String>&lt;choice xmlns="http://www.tei-c.org/ns/1.0">&lt;am xmlns="http://www.tei-c.org/ns/1.0">${ask('base letter', generic, '${selection}')}${ask('abbreviation:', radio,('̄':'  ̄ Macron'; '͛':' ͛ er';'’':' ’ quotation mark'),'̄')}&lt;/am>&lt;ex xmlns="http://www.tei-c.org/ns/1.0">${ask('expansion:', generic)}&lt;/ex>&lt;/choice>${caret}</String>
 															</entry>
 														</serializableOrderedMap>
 													</field>
@@ -3692,6 +3692,56 @@ pc2</String>
 											<Boolean>false</Boolean>
 										</field>
 									</action>
+									<action>
+										<field name="id">
+											<String>-quotation-mark-abbr</String>
+										</field>
+										<field name="name">
+											<String>’(qm)</String>
+										</field>
+										<field name="description">
+											<String>Abbreviation symbol for ’</String>
+										</field>
+										<field name="largeIconPath">
+											<String></String>
+										</field>
+										<field name="smallIconPath">
+											<String></String>
+										</field>
+										<field name="accessKey">
+											<String></String>
+										</field>
+										<field name="accelerator">
+											<null/>
+										</field>
+										<field name="actionModes">
+											<actionMode-array>
+												<actionMode>
+													<field name="xpathCondition">
+														<String></String>
+													</field>
+													<field name="argValues">
+														<serializableOrderedMap>
+															<entry>
+																<String>schemaAware</String>
+																<String>true</String>
+															</entry>
+															<entry>
+																<String>text</String>
+																<String>’</String>
+															</entry>
+														</serializableOrderedMap>
+													</field>
+													<field name="operationID">
+														<String>ro.sync.ecss.extensions.commons.operations.InsertOrReplaceTextOperation</String>
+													</field>
+												</actionMode>
+											</actionMode-array>
+										</field>
+										<field name="enabledInReadOnlyContext">
+											<Boolean>false</Boolean>
+										</field>
+									</action>
 								</action-array>
 							</field>
 							<field name="menubarDescriptor">
@@ -4141,6 +4191,11 @@ pc2</String>
 															<toolbarItem>
 																<field name="actionID">
 																	<String>-er_symbol</String>
+																</field>
+															</toolbarItem>
+															<toolbarItem>
+																<field name="actionID">
+																	<String>-quotation-mark-abbr</String>
 																</field>
 															</toolbarItem>
 															<toolbarSeparator/>
