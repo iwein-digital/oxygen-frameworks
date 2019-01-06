@@ -85,6 +85,13 @@ lb {
     -oxy-display-tags: none;
 }
 
+lb:hover {
+    -oxy-prepend-content: oxy_xpath(
+    'if (preceding::cb[1]/@n) then(preceding::cb[1]/@n) else (preceding::pb[1]/@n)'
+    );
+    background-color:#e6e6fa;
+}
+
 lg{
     margin-left: 15px;
     font-size: small;

@@ -616,7 +616,7 @@ else ancestor::l</String>
 														<serializableOrderedMap>
 															<entry>
 																<String>fragment</String>
-																<String>&lt;pb xmlns="http://www.tei-c.org/ns/1.0" n="${ask('folio:'), generic, ${xpath_eval(xs:integer(./pb[last()])}}">&lt;/pb></String>
+																<String>&lt;pb xmlns="http://www.tei-c.org/ns/1.0" n="${ask('folio number (example: 1r) :',generic,(),'')}">&lt;/pb></String>
 															</entry>
 															<entry>
 																<String>insertLocation</String>
