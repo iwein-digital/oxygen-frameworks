@@ -1928,7 +1928,19 @@ else (if ('${selection}' = 'v')
     then 'i'
     else ( if ('${selection}' = 'i')
       then 'j'
-      else ()))))}&lt;/reg>&lt;/choice></String>
+      else (if ('${selection}' = 'V')
+        then 'U'
+        else ( if ('${selection}' = 'U')
+          then 'V'
+          else ( if ('${selection}' = 'J')
+            then 'I'
+            else ( if ('${selection}' = 'I')
+              then 'J'
+              else()
+            )
+          )
+        )
+      )))))}&lt;/reg>&lt;/choice></String>
 															</entry>
 														</serializableOrderedMap>
 													</field>
