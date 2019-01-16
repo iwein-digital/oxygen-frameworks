@@ -1936,7 +1936,13 @@ else (if ('${selection}' = 'v')
             then 'I'
             else ( if ('${selection}' = 'I')
               then 'J'
-              else()
+              else( if  ('${selection}' = 'v̈')
+                then 'ü'
+                else( if  ('${selection}' = 'V̈')
+                 then 'Ü'
+                 else( )
+                )
+              )
             )
           )
         )
