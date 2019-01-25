@@ -4513,12 +4513,12 @@ pc2</String>
 											<field name="validationType">
 												<validationUnitType>
 													<field name="validationInputType">
-														<String>text/rng</String>
+														<String>text/xml</String>
 													</field>
 												</validationUnitType>
 											</field>
 											<field name="url">
-												<String>${framework}/schemas/hei-schema.xml</String>
+												<String>${currentFileURL}</String>
 											</field>
 											<field name="validationEngine">
 												<validationEngine>
@@ -4540,19 +4540,65 @@ pc2</String>
 												<null/>
 											</field>
 										</validationUnit>
+										<validationUnit>
+											<field name="validationType">
+												<validationUnitType>
+													<field name="validationInputType">
+														<String>text/xml</String>
+													</field>
+												</validationUnitType>
+											</field>
+											<field name="url">
+												<String>${currentFileURL}</String>
+											</field>
+											<field name="validationEngine">
+												<validationEngine>
+													<field name="engineType">
+														<String>&lt;Default engine></String>
+													</field>
+													<field name="allowsAutomaticValidation">
+														<Boolean>true</Boolean>
+													</field>
+												</validationEngine>
+											</field>
+											<field name="allowAutomaticValidation">
+												<Boolean>true</Boolean>
+											</field>
+											<field name="extensions">
+												<null/>
+											</field>
+											<field name="validationSchema">
+												<validationUnitSchema>
+													<field name="dtdSchemaPublicID">
+														<null/>
+													</field>
+													<field name="schematronPhase">
+														<null/>
+													</field>
+													<field name="type">
+														<Integer>7</Integer>
+													</field>
+													<field name="uri">
+														<String>${framework}/schemas/line.sch</String>
+													</field>
+												</validationUnitSchema>
+											</field>
+										</validationUnit>
 									</list>
 								</field>
 								<field name="type">
 									<String>Validation_scenario</String>
 								</field>
 								<field name="name">
-									<String>heiEditions</String>
+									<String>full</String>
 								</field>
 							</validationScenario>
 						</validationScenario-array>
 					</field>
 					<field name="defaultValidationScenarios">
-						<null/>
+						<list>
+							<String>full</String>
+						</list>
 					</field>
 					<field name="defaultTransformationScenarios">
 						<null/>
