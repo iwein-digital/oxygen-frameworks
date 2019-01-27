@@ -1,12 +1,14 @@
-﻿*[rend~="color:red"]{
+﻿@namespace hei "https://digi.ub.uni-heidelberg.de/schema/tei/heiEDITIONS";
+
+*[hei|color~="Red"]{
     color: red;
 }
 
-*[rend~="color:blue"]{
+*[hei|color~="Blue"]{
     color: blue;
 }
 
-*[rend~="color:gold"]{
+*[hei|color~="Gold"]{
     color: gold;
 }
 
@@ -54,17 +56,13 @@ hi{
     	border-color: red;*/
 }
 
-hi[rend~="color:red"][rend~="decoration"]{
+hi[rendition~="hc:RedStroke"]{
     text-decoration: underline;
     text-decoration-color: red;
     color: black;
 }
-hi[rend~="color:blue"][rend~="decoration"]{
-    text-decoration: underline;
-    text-decoration-color: blue;
-    color: black;
-}
-hi[rend~="initial"]{
+
+hei|initial{
     font-weight: bold;
     font-size: xx-large;
 }

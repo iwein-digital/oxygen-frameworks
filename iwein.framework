@@ -214,7 +214,7 @@ nw2</String>
 														<serializableOrderedMap>
 															<entry>
 																<String>fragment</String>
-																<String>&lt;del xmlns="http://www.tei-c.org/ns/1.0">&lt;/del></String>
+																<String>&lt;del xmlns="http://www.tei-c.org/ns/1.0" rendition="${ask('Type of deletion', combobox, ( 'hc:Erased':'Erased'; ' hc:Overwritten' : 'Overwritten' ; 'hc:Overpainted' : 'Overpainted' ;  'hc:Underlined' : 'Underlined' ; 'hc:Underdotted' : 'Underdotted' ; 'hc:Overdotted' : 'Overdotted' ; 'hc:Adapted' : 'Adapted' ; 'hc:ImplicitlyDeleted' : 'Inplicity Deleted' ) )}" >&lt;/del></String>
 															</entry>
 														</serializableOrderedMap>
 													</field>
@@ -260,7 +260,7 @@ nw2</String>
 														<serializableOrderedMap>
 															<entry>
 																<String>fragment</String>
-																<String>&lt;hi xmlns="http://www.tei-c.org/ns/1.0" rend="decoration color:red">&lt;/hi></String>
+																<String>&lt;hi xmlns="http://www.tei-c.org/ns/1.0" rendition="hc:RedStroke">&lt;/hi></String>
 															</entry>
 														</serializableOrderedMap>
 													</field>
@@ -388,7 +388,7 @@ else ancestor::l</String>
 											<String>initial</String>
 										</field>
 										<field name="description">
-											<String>INITIAL: inserts a red initial (&lt;hi rend="init color:red">XXX&lt;/hi> ) – SHORTCUT: CTRL + I</String>
+											<String>INITIAL: inserts an initial (&lt;hei:initial> &lt;/hei:initial> ) – SHORTCUT: CTRL + I</String>
 										</field>
 										<field name="largeIconPath">
 											<String>file:/Users/gusriva/Desktop/initial.png</String>
@@ -412,7 +412,7 @@ else ancestor::l</String>
 														<serializableOrderedMap>
 															<entry>
 																<String>fragment</String>
-																<String>&lt;hi xmlns="http://www.tei-c.org/ns/1.0" rend="initial color:${ask('color:', combobox,('red':'red';'blue':'blue';'gold':'gold'))}" n="${ask('Heigth (lines):', generic)}">&lt;/hi></String>
+																<String>&lt;hei:initial ana="${ask('type:',combobox,('hc:Cadel':'Cadel';'hc:Lombard':'Lombard'), 'Lombard')}" hei:color=":${ask('color:', combobox,('Red':'Red';'Blue':'Blue';'Gold':'Gold'))}" hei:heightLines="${ask('Heigth (lines):', generic)}">&lt;/hei:initial></String>
 															</entry>
 														</serializableOrderedMap>
 													</field>
@@ -762,7 +762,7 @@ else ancestor::l</String>
 														<serializableOrderedMap>
 															<entry>
 																<String>fragment</String>
-																<String>&lt;add xmlns="http://www.tei-c.org/ns/1.0" place='${ask('place:', combobox, ('above':'above';'below':'below'))}'>&lt;/add></String>
+																<String>&lt;add xmlns="http://www.tei-c.org/ns/1.0" hei:placeRef='${ask('place:', combobox, ('hc:AboveLine' : 'Above' ; 'hc:BelowLine' : 'Below' ; 'hc:Inline' : 'On the Line' ; 'hc:Inspace' : 'In a predefined space' ; 'hc:Superimposed' : 'superimposed' ; 'hc:PageTop':'Top of Page';'PageBottom':'Bottom of Page' ; 'hc:PageMarginLeft' : 'Left Margin' ; 'hc:PageMarginRight' : 'Right Margin' ; 'hc:ColumnTop' : 'Top of Column' ; 'hc:ColumnBottom' : 'Bottom of Column' ; 'hc:ColumnMarginLeft' : 'Column Left Margin' ; 'hc:ColumnMarginRight' : 'Column Right Margin' ))}'>&lt;/add></String>
 															</entry>
 														</serializableOrderedMap>
 													</field>
@@ -1968,7 +1968,7 @@ else (if ('${selection}' = 'v')
 											<String>rubric</String>
 										</field>
 										<field name="description">
-											<String>RUBRIC: inserts a &lt;hi rend="color:red">XXX&lt;/hi> SHORTCUT: CTRL + R</String>
+											<String>RUBRIC: inserts a &lt;hi hei:color="Red">XXX&lt;/hi> SHORTCUT: CTRL + R</String>
 										</field>
 										<field name="largeIconPath">
 											<String>file:/Users/gusriva/Desktop/Screen%20Shot%202018-10-09%20at%2017.38.06.png</String>
@@ -1992,7 +1992,7 @@ else (if ('${selection}' = 'v')
 														<serializableOrderedMap>
 															<entry>
 																<String>fragment</String>
-																<String>&lt;hi xmlns="http://www.tei-c.org/ns/1.0" rend="color:red">&lt;/hi></String>
+																<String>&lt;hi xmlns="http://www.tei-c.org/ns/1.0" hei:color="Red">&lt;/hi></String>
 															</entry>
 														</serializableOrderedMap>
 													</field>
@@ -2038,7 +2038,7 @@ else (if ('${selection}' = 'v')
 														<serializableOrderedMap>
 															<entry>
 																<String>fragment</String>
-																<String>&lt;metamark xmlns="http://www.tei-c.org/ns/1.0">&lt;/metamark></String>
+																<String>&lt;metamark xmlns="http://www.tei-c.org/ns/1.0" ana="${ask('Type of Metamark:' , combobox, ( 'hc:Hyphen' : 'Hyphen' ; 'hc:RunOverSign' : 'Run-over Sign' ; 'hc:WordDivider' : 'Word Divider' ; 'hc:CorrectionMark' : 'Correction Mark' ; 'hc:InsertionMark' : 'Insertion Mark' ; 'hc:TranspositionMark' : 'Transposition Mark' ; 'hc:ReferenceMark' : 'Reference Mark' ; 'hc:TokenMarker' : 'Token Marker' ; 'hc:CueInitial' : 'Cue Initial' ; 'hc:CueNumeral' : 'Cue Numeral' ; 'hc:CueParagraphSign' : 'Cue Paragraph Sign') )} ">&lt;/metamark></String>
 															</entry>
 														</serializableOrderedMap>
 													</field>
