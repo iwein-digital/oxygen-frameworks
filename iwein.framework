@@ -3860,6 +3860,302 @@ pc2</String>
 											<Boolean>false</Boolean>
 										</field>
 									</action>
+									<action>
+										<field name="id">
+											<String>del(subst)</String>
+										</field>
+										<field name="name">
+											<String>del(subst)</String>
+										</field>
+										<field name="description">
+											<String>The part that inserts &lt;del> when using &lt;subst></String>
+										</field>
+										<field name="largeIconPath">
+											<String></String>
+										</field>
+										<field name="smallIconPath">
+											<String></String>
+										</field>
+										<field name="accessKey">
+											<String></String>
+										</field>
+										<field name="accelerator">
+											<null/>
+										</field>
+										<field name="actionModes">
+											<actionMode-array>
+												<actionMode>
+													<field name="xpathCondition">
+														<String></String>
+													</field>
+													<field name="argValues">
+														<serializableOrderedMap>
+															<entry>
+																<String>fragment</String>
+																<String>&lt;del xmlns="http://www.tei-c.org/ns/1.0" rendition="${ask('Type of deletion', combobox, ( 'hc:Adapted' : 'Adapted' ; 'hc:Erased':'Erased'; ' hc:Overwritten' : 'Overwritten' ; 'hc:Overpainted' : 'Overpainted' ;  'hc:Underlined' : 'Underlined' ; 'hc:Underdotted' : 'Underdotted' ; 'hc:Overdotted' : 'Overdotted' ; 'hc:ImplicitlyDeleted' : 'Inplicity Deleted' ) )}" >&lt;/del></String>
+															</entry>
+														</serializableOrderedMap>
+													</field>
+													<field name="operationID">
+														<String>ro.sync.ecss.extensions.commons.operations.SurroundWithFragmentOperation</String>
+													</field>
+												</actionMode>
+											</actionMode-array>
+										</field>
+										<field name="enabledInReadOnlyContext">
+											<Boolean>false</Boolean>
+										</field>
+									</action>
+									<action>
+										<field name="id">
+											<String>subst</String>
+										</field>
+										<field name="name">
+											<String>subst</String>
+										</field>
+										<field name="description">
+											<String>subst</String>
+										</field>
+										<field name="largeIconPath">
+											<String></String>
+										</field>
+										<field name="smallIconPath">
+											<String></String>
+										</field>
+										<field name="accessKey">
+											<String></String>
+										</field>
+										<field name="accelerator">
+											<null/>
+										</field>
+										<field name="actionModes">
+											<actionMode-array>
+												<actionMode>
+													<field name="xpathCondition">
+														<String></String>
+													</field>
+													<field name="argValues">
+														<serializableOrderedMap>
+															<entry>
+																<String>actionIDs</String>
+																<String>subst1
+del(subst)
+add(subst)
+add(subst-adapted)
+add(subst-place)</String>
+															</entry>
+														</serializableOrderedMap>
+													</field>
+													<field name="operationID">
+														<String>ro.sync.ecss.extensions.commons.operations.ExecuteMultipleActionsOperation</String>
+													</field>
+												</actionMode>
+											</actionMode-array>
+										</field>
+										<field name="enabledInReadOnlyContext">
+											<Boolean>false</Boolean>
+										</field>
+									</action>
+									<action>
+										<field name="id">
+											<String>subst1</String>
+										</field>
+										<field name="name">
+											<String>subst1</String>
+										</field>
+										<field name="description">
+											<String>Inserts the tag in the multiple action subst</String>
+										</field>
+										<field name="largeIconPath">
+											<String></String>
+										</field>
+										<field name="smallIconPath">
+											<String></String>
+										</field>
+										<field name="accessKey">
+											<String></String>
+										</field>
+										<field name="accelerator">
+											<null/>
+										</field>
+										<field name="actionModes">
+											<actionMode-array>
+												<actionMode>
+													<field name="xpathCondition">
+														<String></String>
+													</field>
+													<field name="argValues">
+														<serializableOrderedMap>
+															<entry>
+																<String>fragment</String>
+																<String>&lt;subst xmlns="http://www.tei-c.org/ns/1.0">&lt;/subst></String>
+															</entry>
+														</serializableOrderedMap>
+													</field>
+													<field name="operationID">
+														<String>ro.sync.ecss.extensions.commons.operations.SurroundWithFragmentOperation</String>
+													</field>
+												</actionMode>
+											</actionMode-array>
+										</field>
+										<field name="enabledInReadOnlyContext">
+											<Boolean>false</Boolean>
+										</field>
+									</action>
+									<action>
+										<field name="id">
+											<String>add(subst)</String>
+										</field>
+										<field name="name">
+											<String>add(subst)</String>
+										</field>
+										<field name="description">
+											<String>Inserts an &lt;add> in a &lt;subst></String>
+										</field>
+										<field name="largeIconPath">
+											<String></String>
+										</field>
+										<field name="smallIconPath">
+											<String></String>
+										</field>
+										<field name="accessKey">
+											<String></String>
+										</field>
+										<field name="accelerator">
+											<null/>
+										</field>
+										<field name="actionModes">
+											<actionMode-array>
+												<actionMode>
+													<field name="xpathCondition">
+														<String></String>
+													</field>
+													<field name="argValues">
+														<serializableOrderedMap>
+															<entry>
+																<String>fragment</String>
+																<String>&lt;add xmlns="http://www.tei-c.org/ns/1.0">&lt;/add></String>
+															</entry>
+															<entry>
+																<String>insertLocation</String>
+																<String>ancestor-or-self::subst</String>
+															</entry>
+															<entry>
+																<String>insertPosition</String>
+																<String>Inside as last child</String>
+															</entry>
+														</serializableOrderedMap>
+													</field>
+													<field name="operationID">
+														<String>ro.sync.ecss.extensions.commons.operations.InsertFragmentOperation</String>
+													</field>
+												</actionMode>
+											</actionMode-array>
+										</field>
+										<field name="enabledInReadOnlyContext">
+											<Boolean>false</Boolean>
+										</field>
+									</action>
+									<action>
+										<field name="id">
+											<String>add(subst-adapted)</String>
+										</field>
+										<field name="name">
+											<String>add(subst-adapted)</String>
+										</field>
+										<field name="description">
+											<String>part of subst</String>
+										</field>
+										<field name="largeIconPath">
+											<String></String>
+										</field>
+										<field name="smallIconPath">
+											<String></String>
+										</field>
+										<field name="accessKey">
+											<String></String>
+										</field>
+										<field name="accelerator">
+											<null/>
+										</field>
+										<field name="actionModes">
+											<actionMode-array>
+												<actionMode>
+													<field name="xpathCondition">
+														<String>preceding-sibling::del[@rendition="hc:Adapted"]</String>
+													</field>
+													<field name="argValues">
+														<serializableOrderedMap>
+															<entry>
+																<String>name</String>
+																<String>rendition</String>
+															</entry>
+															<entry>
+																<String>value</String>
+																<String>hc:Adapted</String>
+															</entry>
+														</serializableOrderedMap>
+													</field>
+													<field name="operationID">
+														<String>ro.sync.ecss.extensions.commons.operations.ChangeAttributeOperation</String>
+													</field>
+												</actionMode>
+											</actionMode-array>
+										</field>
+										<field name="enabledInReadOnlyContext">
+											<Boolean>false</Boolean>
+										</field>
+									</action>
+									<action>
+										<field name="id">
+											<String>add(subst-place)</String>
+										</field>
+										<field name="name">
+											<String>add(subst-place)</String>
+										</field>
+										<field name="description">
+											<String>part of subst</String>
+										</field>
+										<field name="largeIconPath">
+											<String></String>
+										</field>
+										<field name="smallIconPath">
+											<String></String>
+										</field>
+										<field name="accessKey">
+											<String></String>
+										</field>
+										<field name="accelerator">
+											<null/>
+										</field>
+										<field name="actionModes">
+											<actionMode-array>
+												<actionMode>
+													<field name="xpathCondition">
+														<String>preceding-sibling::del[not(@rendition="hc:Adapted")]</String>
+													</field>
+													<field name="argValues">
+														<serializableOrderedMap>
+															<entry>
+																<String>name</String>
+																<String>hei:placeRef</String>
+															</entry>
+															<entry>
+																<String>value</String>
+																<String>${ask('place:', combobox, ('hc:AboveLine' : 'Above' ; 'hc:BelowLine' : 'Below' ; 'hc:Inline' : 'On the Line' ; 'hc:Inspace' : 'In a predefined space' ; 'hc:Superimposed' : 'superimposed' ; 'hc:PageTop':'Top of Page';'PageBottom':'Bottom of Page' ; 'hc:PageMarginLeft' : 'Left Margin' ; 'hc:PageMarginRight' : 'Right Margin' ; 'hc:ColumnTop' : 'Top of Column' ; 'hc:ColumnBottom' : 'Bottom of Column' ; 'hc:ColumnMarginLeft' : 'Column Left Margin' ; 'hc:ColumnMarginRight' : 'Column Right Margin' ))}</String>
+															</entry>
+														</serializableOrderedMap>
+													</field>
+													<field name="operationID">
+														<String>ro.sync.ecss.extensions.commons.operations.ChangeAttributeOperation</String>
+													</field>
+												</actionMode>
+											</actionMode-array>
+										</field>
+										<field name="enabledInReadOnlyContext">
+											<Boolean>false</Boolean>
+										</field>
+									</action>
 								</action-array>
 							</field>
 							<field name="menubarDescriptor">
@@ -4043,6 +4339,11 @@ pc2</String>
 															<toolbarItem>
 																<field name="actionID">
 																	<String>damage</String>
+																</field>
+															</toolbarItem>
+															<toolbarItem>
+																<field name="actionID">
+																	<String>subst</String>
 																</field>
 															</toolbarItem>
 															<toolbarSeparator/>
