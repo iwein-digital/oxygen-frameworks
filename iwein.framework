@@ -214,7 +214,7 @@ nw2</String>
 														<serializableOrderedMap>
 															<entry>
 																<String>fragment</String>
-																<String>&lt;del xmlns="http://www.tei-c.org/ns/1.0" rendition="${ask('Type of deletion', combobox, ( 'hc:Erased':'Erased'; ' hc:Overwritten' : 'Overwritten' ; 'hc:Overpainted' : 'Overpainted' ;  'hc:Underlined' : 'Underlined' ; 'hc:Underdotted' : 'Underdotted' ; 'hc:Overdotted' : 'Overdotted' ; 'hc:Adapted' : 'Adapted' ; 'hc:ImplicitlyDeleted' : 'Inplicity Deleted' ) )}" >&lt;/del></String>
+																<String>&lt;del xmlns="http://www.tei-c.org/ns/1.0" rendition="${ask('Type of deletion', combobox, ( 'hc:Erased':'Erased'; 'hc:Strikethrough': 'Strike Through'; ' hc:Overwritten' : 'Overwritten' ; 'hc:Overpainted' : 'Overpainted' ;  'hc:Underlined' : 'Underlined' ; 'hc:Underdotted' : 'Underdotted' ; 'hc:Overdotted' : 'Overdotted' ; 'hc:Adapted' : 'Adapted' ; 'hc:ImplicitlyDeleted' : 'Inplicity Deleted' ) )}" >&lt;/del></String>
 															</entry>
 														</serializableOrderedMap>
 													</field>
@@ -382,7 +382,7 @@ else ancestor::l</String>
 									</action>
 									<action>
 										<field name="id">
-											<String>Initial</String>
+											<String>initial</String>
 										</field>
 										<field name="name">
 											<String>initial</String>
@@ -412,7 +412,7 @@ else ancestor::l</String>
 														<serializableOrderedMap>
 															<entry>
 																<String>fragment</String>
-																<String>&lt;hei:initial ana="${ask('type:',combobox,('hc:Cadel':'Cadel';'hc:Lombard':'Lombard'), 'Lombard')}" hei:color=":${ask('color:', combobox,('Red':'Red';'Blue':'Blue';'Gold':'Gold'))}" hei:heightLines="${ask('Heigth (lines):', generic)}">&lt;/hei:initial></String>
+																<String>&lt;hei:initial ana="${ask('type:',combobox,('hc:Cadel':'Cadel';'hc:Lombard':'Lombard'), 'Lombard')}" hei:color="${ask('color:', combobox,('Red':'Red';'Blue':'Blue';'Gold':'Gold'))}" hei:heightLines="${ask('Heigth (lines):', generic)}">&lt;/hei:initial></String>
 															</entry>
 														</serializableOrderedMap>
 													</field>
@@ -1724,7 +1724,7 @@ else xs:integer(preceding::lb[2]/@n+1)
 											<String></String>
 										</field>
 										<field name="accelerator">
-											<null/>
+											<String>M1 M2 U</String>
 										</field>
 										<field name="actionModes">
 											<actionMode-array>
@@ -2752,7 +2752,7 @@ else ancestor::w</String>
 															</entry>
 															<entry>
 																<String>value</String>
-																<String>${ask('Part', combobox,('right':'right';'left':'left'))}</String>
+																<String>${ask('Part', combobox,('right' : 'right' ; 'left' : 'left' ; 'both' : 'both'))}</String>
 															</entry>
 														</serializableOrderedMap>
 													</field>
@@ -2792,7 +2792,7 @@ else ancestor::w</String>
 											<actionMode-array>
 												<actionMode>
 													<field name="xpathCondition">
-														<String>ancestor-or-self::w[@join='right'][following-sibling::w[1]]</String>
+														<String>ancestor-or-self::w[@join='right'][following-sibling::w[1]] | ancestor-or-self::w[@join='both'][following-sibling::w[1]]</String>
 													</field>
 													<field name="argValues">
 														<serializableOrderedMap>
@@ -2846,7 +2846,7 @@ else ancestor::w</String>
 											<actionMode-array>
 												<actionMode>
 													<field name="xpathCondition">
-														<String>ancestor-or-self::w[@join='left'][preceding-sibling::w[1]]</String>
+														<String>ancestor-or-self::w[@join='left'][preceding-sibling::w[1]] | ancestor-or-self::w[@join='both'][preceding-sibling::w[1]]</String>
 													</field>
 													<field name="argValues">
 														<serializableOrderedMap>
@@ -2866,56 +2866,6 @@ else ancestor::w</String>
 													</field>
 													<field name="operationID">
 														<String>ro.sync.ecss.extensions.commons.operations.ChangeAttributeOperation</String>
-													</field>
-												</actionMode>
-											</actionMode-array>
-										</field>
-										<field name="enabledInReadOnlyContext">
-											<Boolean>false</Boolean>
-										</field>
-									</action>
-									<action>
-										<field name="id">
-											<String>jn4</String>
-										</field>
-										<field name="name">
-											<String>jn4</String>
-										</field>
-										<field name="description">
-											<String>jn4 moves caret</String>
-										</field>
-										<field name="largeIconPath">
-											<String></String>
-										</field>
-										<field name="smallIconPath">
-											<String></String>
-										</field>
-										<field name="accessKey">
-											<String></String>
-										</field>
-										<field name="accelerator">
-											<null/>
-										</field>
-										<field name="actionModes">
-											<actionMode-array>
-												<actionMode>
-													<field name="xpathCondition">
-														<String></String>
-													</field>
-													<field name="argValues">
-														<serializableOrderedMap>
-															<entry>
-																<String>position</String>
-																<String>Inside, at the end</String>
-															</entry>
-															<entry>
-																<String>xpathLocation</String>
-																<String>.</String>
-															</entry>
-														</serializableOrderedMap>
-													</field>
-													<field name="operationID">
-														<String>ro.sync.ecss.extensions.commons.operations.MoveCaretOperation</String>
 													</field>
 												</actionMode>
 											</actionMode-array>
@@ -3354,7 +3304,7 @@ pc2</String>
 											<String>vn->vnd</String>
 										</field>
 										<field name="description">
-											<String>writes the complete version of vn̄, with regularization and abbreviation</String>
+											<String>writes the complete version of vn̄, with regularization and abbreviation [CTRL + SHIFT + N]</String>
 										</field>
 										<field name="largeIconPath">
 											<String></String>
@@ -3366,7 +3316,7 @@ pc2</String>
 											<String></String>
 										</field>
 										<field name="accelerator">
-											<String>M1 M2 U</String>
+											<String>M1 M2 N</String>
 										</field>
 										<field name="actionModes">
 											<actionMode-array>
@@ -3877,7 +3827,7 @@ pc2</String>
 														<serializableOrderedMap>
 															<entry>
 																<String>fragment</String>
-																<String>&lt;del xmlns="http://www.tei-c.org/ns/1.0" rendition="${ask('Type of deletion', combobox, ( 'hc:Adapted' : 'Adapted' ; 'hc:Erased':'Erased'; ' hc:Overwritten' : 'Overwritten' ; 'hc:Overpainted' : 'Overpainted' ;  'hc:Underlined' : 'Underlined' ; 'hc:Underdotted' : 'Underdotted' ; 'hc:Overdotted' : 'Overdotted' ; 'hc:ImplicitlyDeleted' : 'Inplicity Deleted' ) )}" >&lt;/del></String>
+																<String>&lt;del xmlns="http://www.tei-c.org/ns/1.0" rendition="${ask('Type of deletion', combobox, ( 'hc:Adapted' : 'Adapted' ; 'hc:Erased':'Erased'; 'hc:Strikethrough': 'Strike Through'; ' hc:Overwritten' : 'Overwritten' ; 'hc:Overpainted' : 'Overpainted' ;  'hc:Underlined' : 'Underlined' ; 'hc:Underdotted' : 'Underdotted' ; 'hc:Overdotted' : 'Overdotted' ; 'hc:ImplicitlyDeleted' : 'Inplicity Deleted' ) )}" >&lt;/del></String>
 															</entry>
 														</serializableOrderedMap>
 													</field>
@@ -4187,6 +4137,56 @@ add(subst-place)</String>
 											<Boolean>false</Boolean>
 										</field>
 									</action>
+									<action>
+										<field name="id">
+											<String>jn4</String>
+										</field>
+										<field name="name">
+											<String>jn4</String>
+										</field>
+										<field name="description">
+											<String>jn4 moves caret</String>
+										</field>
+										<field name="largeIconPath">
+											<String></String>
+										</field>
+										<field name="smallIconPath">
+											<String></String>
+										</field>
+										<field name="accessKey">
+											<String></String>
+										</field>
+										<field name="accelerator">
+											<null/>
+										</field>
+										<field name="actionModes">
+											<actionMode-array>
+												<actionMode>
+													<field name="xpathCondition">
+														<String></String>
+													</field>
+													<field name="argValues">
+														<serializableOrderedMap>
+															<entry>
+																<String>position</String>
+																<String>Inside, at the end</String>
+															</entry>
+															<entry>
+																<String>xpathLocation</String>
+																<String>.</String>
+															</entry>
+														</serializableOrderedMap>
+													</field>
+													<field name="operationID">
+														<String>ro.sync.ecss.extensions.commons.operations.MoveCaretOperation</String>
+													</field>
+												</actionMode>
+											</actionMode-array>
+										</field>
+										<field name="enabledInReadOnlyContext">
+											<Boolean>false</Boolean>
+										</field>
+									</action>
 								</action-array>
 							</field>
 							<field name="menubarDescriptor">
@@ -4396,7 +4396,7 @@ add(subst-place)</String>
 															</toolbarItem>
 															<toolbarItem>
 																<field name="actionID">
-																	<String>Initial</String>
+																	<String>initial</String>
 																</field>
 															</toolbarItem>
 															<toolbarItem>
