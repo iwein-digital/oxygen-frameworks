@@ -214,7 +214,7 @@ nw2</String>
 														<serializableOrderedMap>
 															<entry>
 																<String>fragment</String>
-																<String>&lt;del xmlns="http://www.tei-c.org/ns/1.0" rendition="${ask('Type of deletion', combobox, ( 'hc:Erased':'Erased'; 'hc:Strikethrough': 'Strike Through'; ' hc:Overwritten' : 'Overwritten' ; 'hc:Overpainted' : 'Overpainted' ;  'hc:Underlined' : 'Underlined' ; 'hc:Underdotted' : 'Underdotted' ; 'hc:Overdotted' : 'Overdotted' ; 'hc:Adapted' : 'Adapted' ; 'hc:ImplicitlyDeleted' : 'Inplicity Deleted' ) )}" >&lt;/del></String>
+																<String>&lt;del xmlns="http://www.tei-c.org/ns/1.0" rendition="${ask('Type of deletion', combobox, ( 'hc:Erased':'Erased'; 'hc:Strikethrough': 'Strike Through'; ' hc:Overwritten' : 'Overwritten' ; 'hc:Overpainted' : 'Overpainted' ;  'hc:Underlined' : 'Underlined' ; 'hc:Underdotted' : 'Underdotted' ; 'hc:Overdotted' : 'Overdotted' ; 'hc:RedStrikethrough' : 'Red Strike Through' ; 'hc:Adapted' : 'Adapted' ; 'hc:ImplicitlyDeleted' : 'Inplicity Deleted' ) )}" >&lt;/del></String>
 															</entry>
 														</serializableOrderedMap>
 													</field>
@@ -3827,7 +3827,7 @@ pc2</String>
 														<serializableOrderedMap>
 															<entry>
 																<String>fragment</String>
-																<String>&lt;del xmlns="http://www.tei-c.org/ns/1.0" rendition="${ask('Type of deletion', combobox, ( 'hc:Adapted' : 'Adapted' ; 'hc:Erased':'Erased'; 'hc:Strikethrough': 'Strike Through'; ' hc:Overwritten' : 'Overwritten' ; 'hc:Overpainted' : 'Overpainted' ;  'hc:Underlined' : 'Underlined' ; 'hc:Underdotted' : 'Underdotted' ; 'hc:Overdotted' : 'Overdotted' ; 'hc:ImplicitlyDeleted' : 'Inplicity Deleted' ) )}" >&lt;/del></String>
+																<String>&lt;del xmlns="http://www.tei-c.org/ns/1.0" rendition="${ask('Type of deletion', combobox, ( 'hc:Adapted' : 'Adapted' ; 'hc:Erased':'Erased'; 'hc:Strikethrough': 'Strike Through'; ' hc:Overwritten' : 'Overwritten' ; 'hc:Overpainted' : 'Overpainted' ;  'hc:Underlined' : 'Underlined' ; 'hc:Underdotted' : 'Underdotted' ; 'hc:Overdotted' : 'Overdotted' ; 'RedStrikethrough' : 'Red Strike Through' ; 'hc:ImplicitlyDeleted' : 'Inplicity Deleted' ) )}" >&lt;/del></String>
 															</entry>
 														</serializableOrderedMap>
 													</field>
