@@ -1724,7 +1724,7 @@ else xs:integer(preceding::lb[2]/@n+1)
 											<String></String>
 										</field>
 										<field name="accelerator">
-											<String>M1 M2 U</String>
+											<null/>
 										</field>
 										<field name="actionModes">
 											<actionMode-array>
@@ -1770,7 +1770,7 @@ else xs:integer(preceding::lb[2]/@n+1)
 											<String></String>
 										</field>
 										<field name="accelerator">
-											<null/>
+											<String>meta shift U</String>
 										</field>
 										<field name="actionModes">
 											<actionMode-array>
