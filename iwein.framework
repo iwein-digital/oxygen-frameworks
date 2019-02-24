@@ -901,7 +901,7 @@ lb2</String>
 														<serializableOrderedMap>
 															<entry>
 																<String>fragment</String>
-																<String>&lt;pc xmlns="http://www.tei-c.org/ns/1.0" type="ms">&lt;/pc></String>
+																<String>&lt;pc xmlns="http://www.tei-c.org/ns/1.0">&lt;/pc></String>
 															</entry>
 															<entry>
 																<String>insertLocation</String>
@@ -3274,7 +3274,7 @@ pc2</String>
 														<serializableOrderedMap>
 															<entry>
 																<String>fragment</String>
-																<String>&lt;pc xmlns="http://www.tei-c.org/ns/1.0" type="ms">&lt;/pc></String>
+																<String>&lt;pc xmlns="http://www.tei-c.org/ns/1.0">&lt;/pc></String>
 															</entry>
 															<entry>
 																<String>insertLocation</String>
