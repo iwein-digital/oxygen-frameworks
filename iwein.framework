@@ -1782,7 +1782,7 @@ else xs:integer(preceding::lb[2]/@n+1)
 														<serializableOrderedMap>
 															<entry>
 																<String>fragment</String>
-																<String>&lt;choice xmlns="http://www.tei-c.org/ns/1.0">&lt;orig xmlns="http://www.tei-c.org/ns/1.0">v&lt;/orig>&lt;reg xmlns="http://www.tei-c.org/ns/1.0">u&lt;/reg>&lt;/choice></String>
+																<String>&lt;choice xmlns="http://www.tei-c.org/ns/1.0">&lt;orig xmlns="http://www.tei-c.org/ns/1.0">v&lt;/orig>&lt;reg xmlns="http://www.tei-c.org/ns/1.0">u&lt;/reg>&lt;/choice>${caret}</String>
 															</entry>
 														</serializableOrderedMap>
 													</field>
