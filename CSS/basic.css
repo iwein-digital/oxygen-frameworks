@@ -92,9 +92,10 @@ lb {
 
 lb:hover {
     -oxy-prepend-content: oxy_xpath(
-    'if (preceding::cb[1]/@n) then(preceding::cb[1]/@n) else (preceding::pb[1]/@n)'
+    'if (preceding::cb[1]/@n) then( concat(preceding::pb[1]/@n,"-",preceding::cb[1]/@n) ) else (preceding::pb[1]/@n)'
     );
     background-color:#e6e6fa;
+/*    'if (preceding::cb[1]/@n) then( string-join(preceding::pb[1]/@n,preceding::cb[1]/@n) ) else (preceding::pb[1]/@n)'*/
 }
 
 lg{

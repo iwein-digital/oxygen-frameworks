@@ -562,7 +562,7 @@ else ancestor::l</String>
 														<serializableOrderedMap>
 															<entry>
 																<String>fragment</String>
-																<String>&lt;cb xmlns="http://www.tei-c.org/ns/1.0" n="${ask('folio and column (example: 1r-a)')}">&lt;/cb></String>
+																<String>&lt;cb xmlns="http://www.tei-c.org/ns/1.0" n="${ask('column (a,b,c):')}">&lt;/cb></String>
 															</entry>
 															<entry>
 																<String>insertLocation</String>
