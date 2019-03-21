@@ -4233,6 +4233,56 @@ add(subst-place)</String>
 											<Boolean>false</Boolean>
 										</field>
 									</action>
+									<action>
+										<field name="id">
+											<String>break-no-LB</String>
+										</field>
+										<field name="name">
+											<String>break-no-LB</String>
+										</field>
+										<field name="description">
+											<String>Attribute break="no" in a lb element</String>
+										</field>
+										<field name="largeIconPath">
+											<String></String>
+										</field>
+										<field name="smallIconPath">
+											<String></String>
+										</field>
+										<field name="accessKey">
+											<String></String>
+										</field>
+										<field name="accelerator">
+											<null/>
+										</field>
+										<field name="actionModes">
+											<actionMode-array>
+												<actionMode>
+													<field name="xpathCondition">
+														<String>self::lb</String>
+													</field>
+													<field name="argValues">
+														<serializableOrderedMap>
+															<entry>
+																<String>name</String>
+																<String>break</String>
+															</entry>
+															<entry>
+																<String>value</String>
+																<String>no</String>
+															</entry>
+														</serializableOrderedMap>
+													</field>
+													<field name="operationID">
+														<String>ro.sync.ecss.extensions.commons.operations.ChangeAttributeOperation</String>
+													</field>
+												</actionMode>
+											</actionMode-array>
+										</field>
+										<field name="enabledInReadOnlyContext">
+											<Boolean>false</Boolean>
+										</field>
+									</action>
 								</action-array>
 							</field>
 							<field name="menubarDescriptor">
@@ -4316,6 +4366,11 @@ add(subst-place)</String>
 									</field>
 									<field name="toolbarEntriesDescriptorList">
 										<toolbarEntry-array>
+											<toolbarItem>
+												<field name="actionID">
+													<String>break-no-LB</String>
+												</field>
+											</toolbarItem>
 											<toolbarItem>
 												<field name="actionID">
 													<String>abbr</String>
@@ -4545,6 +4600,11 @@ add(subst-place)</String>
 															<toolbarItem>
 																<field name="actionID">
 																	<String>broken-word</String>
+																</field>
+															</toolbarItem>
+															<toolbarItem>
+																<field name="actionID">
+																	<String>break-no-LB</String>
 																</field>
 															</toolbarItem>
 														</toolbarEntry-array>
