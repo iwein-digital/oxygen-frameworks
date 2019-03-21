@@ -2026,7 +2026,7 @@ else (if ('${selection}' = 'v')
 											<String></String>
 										</field>
 										<field name="accelerator">
-											<null/>
+											<String>M1 M2 M</String>
 										</field>
 										<field name="actionModes">
 											<actionMode-array>
@@ -4283,6 +4283,157 @@ add(subst-place)</String>
 											<Boolean>false</Boolean>
 										</field>
 									</action>
+									<action>
+										<field name="id">
+											<String>compl1(2)</String>
+										</field>
+										<field name="name">
+											<String>w+hyphen+lb+w</String>
+										</field>
+										<field name="description">
+											<String></String>
+										</field>
+										<field name="largeIconPath">
+											<String></String>
+										</field>
+										<field name="smallIconPath">
+											<String></String>
+										</field>
+										<field name="accessKey">
+											<String></String>
+										</field>
+										<field name="accelerator">
+											<null/>
+										</field>
+										<field name="actionModes">
+											<actionMode-array>
+												<actionMode>
+													<field name="xpathCondition">
+														<String>self::l</String>
+													</field>
+													<field name="argValues">
+														<serializableOrderedMap>
+															<entry>
+																<String>fragment</String>
+																<String>&lt;w xmlns="http://www.tei-c.org/ns/1.0" part="I">${caret}&lt;/w>&lt;metamark xmlns="http://www.tei-c.org/ns/1.0" ana="hc:Hyphen">⸗&lt;/metamark>&lt;lb xmlns="http://www.tei-c.org/ns/1.0" n="${xpath_eval(xs:integer(following::l[1]/preceding::lb[1]/@n+1))}"/>&lt;w xmlns="http://www.tei-c.org/ns/1.0">&lt;/w></String>
+															</entry>
+															<entry>
+																<String>insertPosition</String>
+																<String>Inside as first child</String>
+															</entry>
+														</serializableOrderedMap>
+													</field>
+													<field name="operationID">
+														<String>ro.sync.ecss.extensions.commons.operations.InsertOrReplaceFragmentOperation</String>
+													</field>
+												</actionMode>
+											</actionMode-array>
+										</field>
+										<field name="enabledInReadOnlyContext">
+											<Boolean>false</Boolean>
+										</field>
+									</action>
+									<action>
+										<field name="id">
+											<String>compl1</String>
+										</field>
+										<field name="name">
+											<String>w+hyphen+lb+w</String>
+										</field>
+										<field name="description">
+											<String>Complex 1:
+@broken word (part 'I') + &lt;metamark> (hyphen) + double oblique hyphen + &lt;lb> (following line + @break="no")</String>
+										</field>
+										<field name="largeIconPath">
+											<String></String>
+										</field>
+										<field name="smallIconPath">
+											<String></String>
+										</field>
+										<field name="accessKey">
+											<String></String>
+										</field>
+										<field name="accelerator">
+											<null/>
+										</field>
+										<field name="actionModes">
+											<actionMode-array>
+												<actionMode>
+													<field name="xpathCondition">
+														<String></String>
+													</field>
+													<field name="argValues">
+														<serializableOrderedMap>
+															<entry>
+																<String>actionIDs</String>
+																<String>compl1(1)</String>
+															</entry>
+														</serializableOrderedMap>
+													</field>
+													<field name="operationID">
+														<String>ro.sync.ecss.extensions.commons.operations.ExecuteMultipleActionsOperation</String>
+													</field>
+												</actionMode>
+											</actionMode-array>
+										</field>
+										<field name="enabledInReadOnlyContext">
+											<Boolean>false</Boolean>
+										</field>
+									</action>
+									<action>
+										<field name="id">
+											<String>compl1(1)</String>
+										</field>
+										<field name="name">
+											<String>w+hyphen+lb+w</String>
+										</field>
+										<field name="description">
+											<String></String>
+										</field>
+										<field name="largeIconPath">
+											<String></String>
+										</field>
+										<field name="smallIconPath">
+											<String></String>
+										</field>
+										<field name="accessKey">
+											<String></String>
+										</field>
+										<field name="accelerator">
+											<null/>
+										</field>
+										<field name="actionModes">
+											<actionMode-array>
+												<actionMode>
+													<field name="xpathCondition">
+														<String>self::w</String>
+													</field>
+													<field name="argValues">
+														<serializableOrderedMap>
+															<entry>
+																<String>fragment</String>
+																<String>&lt;w xmlns="http://www.tei-c.org/ns/1.0" part="I">${caret}&lt;/w>&lt;metamark xmlns="http://www.tei-c.org/ns/1.0" ana="hc:Hyphen">⸗&lt;/metamark>&lt;lb xmlns="http://www.tei-c.org/ns/1.0" n="${xpath_eval(xs:integer(following::l[1]/preceding::lb[1]/@n+1))}"/>&lt;w xmlns="http://www.tei-c.org/ns/1.0">&lt;/w></String>
+															</entry>
+															<entry>
+																<String>insertLocation</String>
+																<String></String>
+															</entry>
+															<entry>
+																<String>insertPosition</String>
+																<String>After</String>
+															</entry>
+														</serializableOrderedMap>
+													</field>
+													<field name="operationID">
+														<String>ro.sync.ecss.extensions.commons.operations.InsertOrReplaceFragmentOperation</String>
+													</field>
+												</actionMode>
+											</actionMode-array>
+										</field>
+										<field name="enabledInReadOnlyContext">
+											<Boolean>false</Boolean>
+										</field>
+									</action>
 								</action-array>
 							</field>
 							<field name="menubarDescriptor">
@@ -4366,6 +4517,11 @@ add(subst-place)</String>
 									</field>
 									<field name="toolbarEntriesDescriptorList">
 										<toolbarEntry-array>
+											<toolbarItem>
+												<field name="actionID">
+													<String>compl1(2)</String>
+												</field>
+											</toolbarItem>
 											<toolbarItem>
 												<field name="actionID">
 													<String>break-no-LB</String>
@@ -4677,6 +4833,11 @@ add(subst-place)</String>
 															<toolbarItem>
 																<field name="actionID">
 																	<String>vn->und</String>
+																</field>
+															</toolbarItem>
+															<toolbarItem>
+																<field name="actionID">
+																	<String>compl1(2)</String>
 																</field>
 															</toolbarItem>
 														</toolbarEntry-array>
