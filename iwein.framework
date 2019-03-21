@@ -4412,7 +4412,7 @@ add(subst-place)</String>
 														<serializableOrderedMap>
 															<entry>
 																<String>fragment</String>
-																<String>&lt;w xmlns="http://www.tei-c.org/ns/1.0" part="I">${caret}&lt;/w>&lt;metamark xmlns="http://www.tei-c.org/ns/1.0" ana="hc:Hyphen">⸗&lt;/metamark>&lt;lb xmlns="http://www.tei-c.org/ns/1.0" n="${xpath_eval(xs:integer(following::l[1]/preceding::lb[1]/@n+1))}"/>&lt;w xmlns="http://www.tei-c.org/ns/1.0">&lt;/w></String>
+																<String>&lt;w xmlns="http://www.tei-c.org/ns/1.0" part="I">${caret}&lt;/w>&lt;metamark xmlns="http://www.tei-c.org/ns/1.0" ana="hc:Hyphen">⸗&lt;/metamark>&lt;lb xmlns="http://www.tei-c.org/ns/1.0" break="no" n="${xpath_eval(xs:integer(following::l[1]/preceding::lb[1]/@n+1))}"/>&lt;w xmlns="http://www.tei-c.org/ns/1.0" part="F">&lt;/w></String>
 															</entry>
 															<entry>
 																<String>insertLocation</String>
