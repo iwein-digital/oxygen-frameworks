@@ -4288,7 +4288,7 @@ add(subst-place)</String>
 											<String>compl1(2)</String>
 										</field>
 										<field name="name">
-											<String>w+hyphen+lb+w</String>
+											<String>compl1(2)</String>
 										</field>
 										<field name="description">
 											<String></String>
@@ -4309,22 +4309,26 @@ add(subst-place)</String>
 											<actionMode-array>
 												<actionMode>
 													<field name="xpathCondition">
-														<String>self::l</String>
+														<String>ancestor-or-self::w</String>
 													</field>
 													<field name="argValues">
 														<serializableOrderedMap>
 															<entry>
 																<String>fragment</String>
-																<String>&lt;w xmlns="http://www.tei-c.org/ns/1.0" part="I">${caret}&lt;/w>&lt;metamark xmlns="http://www.tei-c.org/ns/1.0" ana="hc:Hyphen">⸗&lt;/metamark>&lt;lb xmlns="http://www.tei-c.org/ns/1.0" n="${xpath_eval(xs:integer(following::l[1]/preceding::lb[1]/@n+1))}"/>&lt;w xmlns="http://www.tei-c.org/ns/1.0">&lt;/w></String>
+																<String>&lt;metamark xmlns="http://www.tei-c.org/ns/1.0" ana="hc:Hyphen">⸗&lt;/metamark>&lt;lb xmlns="http://www.tei-c.org/ns/1.0" break="no" n="${xpath_eval(xs:integer(following::l[1]/preceding::lb[1]/@n+1))}"/>&lt;w xmlns="http://www.tei-c.org/ns/1.0" part="F">${caret}&lt;/w></String>
+															</entry>
+															<entry>
+																<String>insertLocation</String>
+																<String>ancestor-or-self::w</String>
 															</entry>
 															<entry>
 																<String>insertPosition</String>
-																<String>Inside as first child</String>
+																<String>After</String>
 															</entry>
 														</serializableOrderedMap>
 													</field>
 													<field name="operationID">
-														<String>ro.sync.ecss.extensions.commons.operations.InsertOrReplaceFragmentOperation</String>
+														<String>ro.sync.ecss.extensions.commons.operations.InsertFragmentOperation</String>
 													</field>
 												</actionMode>
 											</actionMode-array>
@@ -4366,7 +4370,9 @@ add(subst-place)</String>
 														<serializableOrderedMap>
 															<entry>
 																<String>actionIDs</String>
-																<String>compl1(1)</String>
+																<String>compl1(1)
+compl1(2)
+compl1(3)</String>
 															</entry>
 														</serializableOrderedMap>
 													</field>
@@ -4382,10 +4388,10 @@ add(subst-place)</String>
 									</action>
 									<action>
 										<field name="id">
-											<String>compl1(1)</String>
+											<String>compl1(3)</String>
 										</field>
 										<field name="name">
-											<String>w+hyphen+lb+w</String>
+											<String>compl1(3)</String>
 										</field>
 										<field name="description">
 											<String></String>
@@ -4406,7 +4412,7 @@ add(subst-place)</String>
 											<actionMode-array>
 												<actionMode>
 													<field name="xpathCondition">
-														<String>self::w</String>
+														<String>self::l</String>
 													</field>
 													<field name="argValues">
 														<serializableOrderedMap>
@@ -4426,6 +4432,60 @@ add(subst-place)</String>
 													</field>
 													<field name="operationID">
 														<String>ro.sync.ecss.extensions.commons.operations.InsertOrReplaceFragmentOperation</String>
+													</field>
+												</actionMode>
+											</actionMode-array>
+										</field>
+										<field name="enabledInReadOnlyContext">
+											<Boolean>false</Boolean>
+										</field>
+									</action>
+									<action>
+										<field name="id">
+											<String>compl1(1)</String>
+										</field>
+										<field name="name">
+											<String>compl1(1)</String>
+										</field>
+										<field name="description">
+											<String></String>
+										</field>
+										<field name="largeIconPath">
+											<String></String>
+										</field>
+										<field name="smallIconPath">
+											<String></String>
+										</field>
+										<field name="accessKey">
+											<String></String>
+										</field>
+										<field name="accelerator">
+											<null/>
+										</field>
+										<field name="actionModes">
+											<actionMode-array>
+												<actionMode>
+													<field name="xpathCondition">
+														<String>ancestor-or-self::w</String>
+													</field>
+													<field name="argValues">
+														<serializableOrderedMap>
+															<entry>
+																<String>elementLocation</String>
+																<String>ancestor-or-self::w</String>
+															</entry>
+															<entry>
+																<String>name</String>
+																<String>part</String>
+															</entry>
+															<entry>
+																<String>value</String>
+																<String>I</String>
+															</entry>
+														</serializableOrderedMap>
+													</field>
+													<field name="operationID">
+														<String>ro.sync.ecss.extensions.commons.operations.ChangeAttributeOperation</String>
 													</field>
 												</actionMode>
 											</actionMode-array>
@@ -4517,11 +4577,6 @@ add(subst-place)</String>
 									</field>
 									<field name="toolbarEntriesDescriptorList">
 										<toolbarEntry-array>
-											<toolbarItem>
-												<field name="actionID">
-													<String>compl1(2)</String>
-												</field>
-											</toolbarItem>
 											<toolbarItem>
 												<field name="actionID">
 													<String>break-no-LB</String>
@@ -4837,7 +4892,7 @@ add(subst-place)</String>
 															</toolbarItem>
 															<toolbarItem>
 																<field name="actionID">
-																	<String>compl1(2)</String>
+																	<String>compl1</String>
 																</field>
 															</toolbarItem>
 														</toolbarEntry-array>
