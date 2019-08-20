@@ -56,10 +56,16 @@ hi{
     	border-color: red;*/
 }
 
-hi[rendition~="hc:RedStroke"]{
+hi[rendition~="hc:RedStroke"],hi[rendition~="hc:RedRetrace"]{
     text-decoration: underline;
     text-decoration-color: red;
     color: black;
+}
+
+del[rendition~="hc:RedStrikethrough"]{
+    text-decoration: line-through;
+    -oxy-display-tags: none;
+    text-decoration-color: red;
 }
 
 hi[rendition~="hc:Versal"]{

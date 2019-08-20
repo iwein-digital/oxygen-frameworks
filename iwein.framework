@@ -1571,11 +1571,7 @@ line2</String>
 															</entry>
 															<entry>
 																<String>value</String>
-																<String>${ask('line number:',generic,(),'${xpath_eval(
-if (preceding::lb[1]/@n != '')
-then xs:integer(preceding::lb[1]/@n+1)
-else xs:integer(preceding::lb[2]/@n+1)
-)}'))}</String>
+																<String>${ask('line number:',generic,(),'${xpath_eval(if (preceding::lb[1]/@n != '')then xs:integer(preceding::lb[1]/@n+1)else xs:integer(preceding::lb[2]/@n+1))}'))}</String>
 															</entry>
 														</serializableOrderedMap>
 													</field>
@@ -5098,13 +5094,13 @@ compl1(3)</String>
 									<String></String>
 								</field>
 								<field name="attributeLocalName">
-									<String>type</String>
+									<String>ana</String>
 								</field>
 								<field name="attributeNamespace">
 									<String>*</String>
 								</field>
 								<field name="attributeValue">
-									<String>reimpaar_frame</String>
+									<String>hc:IWDDocument</String>
 								</field>
 							</documentTypeRule>
 						</documentTypeRule-array>
