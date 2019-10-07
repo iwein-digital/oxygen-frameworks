@@ -168,7 +168,7 @@ nw2</String>
 														<serializableOrderedMap>
 															<entry>
 																<String>fragment</String>
-																<String>&lt;choice xmlns="http://www.tei-c.org/ns/1.0">&lt;am xmlns="http://www.tei-c.org/ns/1.0">${ask('base letter', generic, '${selection}', @question)}${ask('abbreviation:', radio,('̄':'  ̄ Macron'; '͛':' ͛ er';'ᷓ':' ᷓ -ra';'’':' ’ quotation mark'; '' : 'None'),'̄')}&lt;/am>&lt;ex xmlns="http://www.tei-c.org/ns/1.0">${ask('expansion:', generic,'')}&lt;/ex>&lt;/choice>${caret}</String>
+																<String>&lt;choice xmlns="http://www.tei-c.org/ns/1.0">&lt;am xmlns="http://www.tei-c.org/ns/1.0">${ask('base letter', generic, '${selection}', @question)}${ask('abbreviation:', radio,('̄':'  ̄ Macron'; '͛':' ͛ er';'ᷓ':' ᷓ -ra';'’':' ’ quotation mark'; '' : '';  '' : ''; '' : 'None'),'̄')}&lt;/am>&lt;ex xmlns="http://www.tei-c.org/ns/1.0">${ask('expansion:', generic,'')}&lt;/ex>&lt;/choice>${caret}</String>
 															</entry>
 														</serializableOrderedMap>
 													</field>
@@ -4490,6 +4490,98 @@ compl1(3)</String>
 											<Boolean>false</Boolean>
 										</field>
 									</action>
+									<action>
+										<field name="id">
+											<String>w-versal</String>
+										</field>
+										<field name="name">
+											<String>w-versal</String>
+										</field>
+										<field name="description">
+											<String>Inserts a w composed from a v in the versalia column and following v in the main text</String>
+										</field>
+										<field name="largeIconPath">
+											<String></String>
+										</field>
+										<field name="smallIconPath">
+											<String></String>
+										</field>
+										<field name="accessKey">
+											<String></String>
+										</field>
+										<field name="accelerator">
+											<null/>
+										</field>
+										<field name="actionModes">
+											<actionMode-array>
+												<actionMode>
+													<field name="xpathCondition">
+														<String></String>
+													</field>
+													<field name="argValues">
+														<serializableOrderedMap>
+															<entry>
+																<String>fragment</String>
+																<String>&lt;choice>&lt;orig>&lt;hi rendition="hc:Versal">v&lt;/hi>v&lt;/orig>&lt;reg>&lt;hi rendition="hc:Versal">w&lt;/hi>&lt;/reg>&lt;/choice></String>
+															</entry>
+														</serializableOrderedMap>
+													</field>
+													<field name="operationID">
+														<String>ro.sync.ecss.extensions.commons.operations.InsertOrReplaceFragmentOperation</String>
+													</field>
+												</actionMode>
+											</actionMode-array>
+										</field>
+										<field name="enabledInReadOnlyContext">
+											<Boolean>false</Boolean>
+										</field>
+									</action>
+									<action>
+										<field name="id">
+											<String>w=>wu</String>
+										</field>
+										<field name="name">
+											<String>w=>wu</String>
+										</field>
+										<field name="description">
+											<String>w=>wu</String>
+										</field>
+										<field name="largeIconPath">
+											<String></String>
+										</field>
+										<field name="smallIconPath">
+											<String></String>
+										</field>
+										<field name="accessKey">
+											<String></String>
+										</field>
+										<field name="accelerator">
+											<null/>
+										</field>
+										<field name="actionModes">
+											<actionMode-array>
+												<actionMode>
+													<field name="xpathCondition">
+														<String></String>
+													</field>
+													<field name="argValues">
+														<serializableOrderedMap>
+															<entry>
+																<String>fragment</String>
+																<String>&lt;choice xmlns="http://www.tei-c.org/ns/1.0">&lt;orig xmlns="http://www.tei-c.org/ns/1.0">w&lt;/orig>&lt;reg xmlns="http://www.tei-c.org/ns/1.0">wu&lt;/reg>&lt;/choice></String>
+															</entry>
+														</serializableOrderedMap>
+													</field>
+													<field name="operationID">
+														<String>ro.sync.ecss.extensions.commons.operations.InsertOrReplaceFragmentOperation</String>
+													</field>
+												</actionMode>
+											</actionMode-array>
+										</field>
+										<field name="enabledInReadOnlyContext">
+											<Boolean>false</Boolean>
+										</field>
+									</action>
 								</action-array>
 							</field>
 							<field name="menubarDescriptor">
@@ -4639,32 +4731,6 @@ compl1(3)</String>
 													</field>
 													<field name="toolbarEntriesDescriptorList">
 														<toolbarEntry-array>
-															<toolbarItem>
-																<field name="actionID">
-																	<String>regularize</String>
-																</field>
-															</toolbarItem>
-															<toolbarItem>
-																<field name="actionID">
-																	<String>u=>v</String>
-																</field>
-															</toolbarItem>
-															<toolbarItem>
-																<field name="actionID">
-																	<String>v=>u</String>
-																</field>
-															</toolbarItem>
-															<toolbarItem>
-																<field name="actionID">
-																	<String>i=>j</String>
-																</field>
-															</toolbarItem>
-															<toolbarItem>
-																<field name="actionID">
-																	<String>j=>i</String>
-																</field>
-															</toolbarItem>
-															<toolbarSeparator/>
 															<toolbarItem>
 																<field name="actionID">
 																	<String>add</String>
@@ -4863,6 +4929,12 @@ compl1(3)</String>
 																	<String>v(er)</String>
 																</field>
 															</toolbarItem>
+															<toolbarSeparator/>
+															<toolbarItem>
+																<field name="actionID">
+																	<String>w-versal</String>
+																</field>
+															</toolbarItem>
 														</toolbarEntry-array>
 													</field>
 												</toolbar>
@@ -5015,6 +5087,57 @@ compl1(3)</String>
 															<toolbarItem>
 																<field name="actionID">
 																	<String>v above - Copy</String>
+																</field>
+															</toolbarItem>
+														</toolbarEntry-array>
+													</field>
+												</toolbar>
+												<toolbar>
+													<field name="id">
+														<String>Regularization</String>
+													</field>
+													<field name="type">
+														<Integer>3</Integer>
+													</field>
+													<field name="largeIconPath">
+														<String></String>
+													</field>
+													<field name="smallIconPath">
+														<String></String>
+													</field>
+													<field name="toolbarEntriesDescriptorList">
+														<toolbarEntry-array>
+															<toolbarItem>
+																<field name="actionID">
+																	<String>regularize</String>
+																</field>
+															</toolbarItem>
+															<toolbarSeparator/>
+															<toolbarItem>
+																<field name="actionID">
+																	<String>j=>i</String>
+																</field>
+															</toolbarItem>
+															<toolbarItem>
+																<field name="actionID">
+																	<String>i=>j</String>
+																</field>
+															</toolbarItem>
+															<toolbarSeparator/>
+															<toolbarItem>
+																<field name="actionID">
+																	<String>u=>v</String>
+																</field>
+															</toolbarItem>
+															<toolbarItem>
+																<field name="actionID">
+																	<String>v=>u</String>
+																</field>
+															</toolbarItem>
+															<toolbarSeparator/>
+															<toolbarItem>
+																<field name="actionID">
+																	<String>w=>wu</String>
 																</field>
 															</toolbarItem>
 														</toolbarEntry-array>
