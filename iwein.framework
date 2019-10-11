@@ -4522,7 +4522,7 @@ compl1(3)</String>
 														<serializableOrderedMap>
 															<entry>
 																<String>fragment</String>
-																<String>&lt;choice>&lt;orig>&lt;hi rendition="hc:Versal">v&lt;/hi>v&lt;/orig>&lt;reg>&lt;hi rendition="hc:Versal">w&lt;/hi>&lt;/reg>&lt;/choice></String>
+																<String>&lt;choice xmlns="http://www.tei-c.org/ns/1.0">&lt;orig xmlns="http://www.tei-c.org/ns/1.0">&lt;hi xmlns="http://www.tei-c.org/ns/1.0" rendition="hc:Versal">v&lt;/hi>v&lt;/orig>&lt;reg>&lt;hi xmlns="http://www.tei-c.org/ns/1.0" rendition="hc:Versal">w&lt;/hi>&lt;/reg>&lt;/choice></String>
 															</entry>
 														</serializableOrderedMap>
 													</field>
@@ -4569,6 +4569,60 @@ compl1(3)</String>
 															<entry>
 																<String>fragment</String>
 																<String>&lt;choice xmlns="http://www.tei-c.org/ns/1.0">&lt;orig xmlns="http://www.tei-c.org/ns/1.0">w&lt;/orig>&lt;reg xmlns="http://www.tei-c.org/ns/1.0">wu&lt;/reg>&lt;/choice></String>
+															</entry>
+														</serializableOrderedMap>
+													</field>
+													<field name="operationID">
+														<String>ro.sync.ecss.extensions.commons.operations.InsertOrReplaceFragmentOperation</String>
+													</field>
+												</actionMode>
+											</actionMode-array>
+										</field>
+										<field name="enabledInReadOnlyContext">
+											<Boolean>false</Boolean>
+										</field>
+									</action>
+									<action>
+										<field name="id">
+											<String>supplied</String>
+										</field>
+										<field name="name">
+											<String>supplied</String>
+										</field>
+										<field name="description">
+											<String>Creates a supplied tag</String>
+										</field>
+										<field name="largeIconPath">
+											<String></String>
+										</field>
+										<field name="smallIconPath">
+											<String></String>
+										</field>
+										<field name="accessKey">
+											<String></String>
+										</field>
+										<field name="accelerator">
+											<null/>
+										</field>
+										<field name="actionModes">
+											<actionMode-array>
+												<actionMode>
+													<field name="xpathCondition">
+														<String></String>
+													</field>
+													<field name="argValues">
+														<serializableOrderedMap>
+															<entry>
+																<String>fragment</String>
+																<String>&lt;note xmlns="http://www.tei-c.org/ns/1.0" type="${ask('type of note:', combobox,('editorial':'editorial';'gloss':'gloss'))}" resp="${ask('who is responsible:')}">${ask('Note content:')}&lt;/note></String>
+															</entry>
+															<entry>
+																<String>insertLocation</String>
+																<String></String>
+															</entry>
+															<entry>
+																<String>insertPosition</String>
+																<String>Before</String>
 															</entry>
 														</serializableOrderedMap>
 													</field>
@@ -4749,6 +4803,11 @@ compl1(3)</String>
 															<toolbarItem>
 																<field name="actionID">
 																	<String>subst</String>
+																</field>
+															</toolbarItem>
+															<toolbarItem>
+																<field name="actionID">
+																	<String>supplied</String>
 																</field>
 															</toolbarItem>
 															<toolbarSeparator/>
@@ -4968,6 +5027,62 @@ compl1(3)</String>
 												</toolbar>
 												<toolbar>
 													<field name="id">
+														<String>Regularization</String>
+													</field>
+													<field name="type">
+														<Integer>3</Integer>
+													</field>
+													<field name="largeIconPath">
+														<String></String>
+													</field>
+													<field name="smallIconPath">
+														<String></String>
+													</field>
+													<field name="toolbarEntriesDescriptorList">
+														<toolbarEntry-array>
+															<toolbarItem>
+																<field name="actionID">
+																	<String>regularize</String>
+																</field>
+															</toolbarItem>
+															<toolbarSeparator/>
+															<toolbarItem>
+																<field name="actionID">
+																	<String>j=>i</String>
+																</field>
+															</toolbarItem>
+															<toolbarItem>
+																<field name="actionID">
+																	<String>i=>j</String>
+																</field>
+															</toolbarItem>
+															<toolbarSeparator/>
+															<toolbarItem>
+																<field name="actionID">
+																	<String>u=>v</String>
+																</field>
+															</toolbarItem>
+															<toolbarItem>
+																<field name="actionID">
+																	<String>v=>u</String>
+																</field>
+															</toolbarItem>
+															<toolbarSeparator/>
+															<toolbarItem>
+																<field name="actionID">
+																	<String>w=>wu</String>
+																</field>
+															</toolbarItem>
+															<toolbarItem>
+																<field name="actionID">
+																	<String>w-versal</String>
+																</field>
+															</toolbarItem>
+														</toolbarEntry-array>
+													</field>
+												</toolbar>
+												<toolbar>
+													<field name="id">
 														<String>Special Characters</String>
 													</field>
 													<field name="type">
@@ -5087,57 +5202,6 @@ compl1(3)</String>
 															<toolbarItem>
 																<field name="actionID">
 																	<String>v above - Copy</String>
-																</field>
-															</toolbarItem>
-														</toolbarEntry-array>
-													</field>
-												</toolbar>
-												<toolbar>
-													<field name="id">
-														<String>Regularization</String>
-													</field>
-													<field name="type">
-														<Integer>3</Integer>
-													</field>
-													<field name="largeIconPath">
-														<String></String>
-													</field>
-													<field name="smallIconPath">
-														<String></String>
-													</field>
-													<field name="toolbarEntriesDescriptorList">
-														<toolbarEntry-array>
-															<toolbarItem>
-																<field name="actionID">
-																	<String>regularize</String>
-																</field>
-															</toolbarItem>
-															<toolbarSeparator/>
-															<toolbarItem>
-																<field name="actionID">
-																	<String>j=>i</String>
-																</field>
-															</toolbarItem>
-															<toolbarItem>
-																<field name="actionID">
-																	<String>i=>j</String>
-																</field>
-															</toolbarItem>
-															<toolbarSeparator/>
-															<toolbarItem>
-																<field name="actionID">
-																	<String>u=>v</String>
-																</field>
-															</toolbarItem>
-															<toolbarItem>
-																<field name="actionID">
-																	<String>v=>u</String>
-																</field>
-															</toolbarItem>
-															<toolbarSeparator/>
-															<toolbarItem>
-																<field name="actionID">
-																	<String>w=>wu</String>
 																</field>
 															</toolbarItem>
 														</toolbarEntry-array>
