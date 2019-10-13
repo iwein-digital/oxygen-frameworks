@@ -4621,7 +4621,7 @@ compl1(3)</String>
 														<serializableOrderedMap>
 															<entry>
 																<String>fragment</String>
-																<String>&lt;note xmlns="http://www.tei-c.org/ns/1.0" type="${ask('type of note:', combobox,('editorial':'editorial';'gloss':'gloss'))}" resp="${ask('who is responsible:')}">${ask('Note content:')}&lt;/note></String>
+																<String>&lt;supplied xmlns="http://www.tei-c.org/ns/1.0" >&lt;/supplied></String>
 															</entry>
 															<entry>
 																<String>insertLocation</String>
