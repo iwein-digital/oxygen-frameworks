@@ -1,5 +1,14 @@
 ﻿@namespace hei "https://digi.ub.uni-heidelberg.de/schema/tei/heiEDITIONS";
 
+@font-face {
+  font-family: JunicodeFr;
+  src: url('font/Junicode.ttf');
+}
+
+* {
+    font-family: JunicodeFr;
+}
+
 *[hei|color~="Red"]{
     color: red;
 }
