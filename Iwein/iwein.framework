@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<serialized version="20.1" xml:space="preserve">
+<serialized version="21.1" xml:space="preserve">
 	<serializableOrderedMap>
 		<entry>
 			<String>document.types</String>
@@ -1578,7 +1578,7 @@ line2</String>
 															</entry>
 															<entry>
 																<String>value</String>
-																<String>${ask('line number:',generic,(),'${xpath_eval(if (preceding::lb[1]/@n != '')then xs:integer(preceding::lb[1]/@n+1)else xs:integer(preceding::lb[2]/@n+1))}'))}</String>
+																<String>${ask("line number:")}</String>
 															</entry>
 														</serializableOrderedMap>
 													</field>
