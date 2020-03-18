@@ -1,4 +1,7 @@
-This Framework was developed by Gustavo Fernández Riva to be used in combination with the [Oxygen Software](https://www.oxygenxml.com/)®. Although it is meant to be used in combination with the propietary software Oxygen, the framework itself is licenced under a [CC 4.0 Attribution (CC 4.0 BY)](https://creativecommons.org/licenses/by/4.0/). This Framework aids in the transcriptions of primary sources. At the current moment it is designed specially for the transcription of medieval poetry in rhyming couplets. It is intended to be used in the transcription of the Middle High German arthurian romance *Iwein* by Hartmann von Aue.
+This is a particular implementation of the >Maeren< Framework developed by Gustavo Fernández Riva to be used in combination with the [Oxygen Software](https://www.oxygenxml.com/)®. It has functions adapted specifically for the manuscripts of Hartmann von Aue's *Iwein*.
+
+
+Although it is meant to be used in combination with the propietary software Oxygen, the framework itself is licenced under a [CC 4.0 Attribution (CC 4.0 BY)](https://creativecommons.org/licenses/by/4.0/). This Framework aids in the transcriptions of primary sources. At the current moment it is designed specially for the transcription of medieval poetry in rhyming couplets. 
 
 Installation:
 
